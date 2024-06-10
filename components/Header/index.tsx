@@ -12,14 +12,14 @@ const NAV_DATA = [
 
 export const Header: React.FC = () => {
   return (
-    <header className="bg-primary w-screen flex items-center justify-between py-5 px-7 h-25">
+    <header className="bg-primary w-screen flex items-center justify-between py-7 px-12 h-25">
       <div>Logo</div>
       <div>
         <nav>
           <ul className="flex gap-5">
             {NAV_DATA.map((navItem) => (
               <li
-                className="relative  after:content-[''] after:absolute after:hover: after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
+                className="relative text-secondary after:content-[''] after:absolute after:hover: after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
                 key={navItem.name}
               >
                 <a href={navItem.href}>
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
         </nav>
       </div>
       <div>
-        <CtaButton />
+        <CtaButton title="Agende sua consulta" />
       </div>
     </header>
   );

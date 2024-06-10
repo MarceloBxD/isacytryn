@@ -1,27 +1,17 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
-export const CtaButton: React.FC = () => {
+type CtaButtonProps = {
+  title: string;
+};
+
+export const CtaButton: React.FC<CtaButtonProps> = ({ title }) => {
   return (
-    <button className="flex bg-secondary p-4 rounded-full items-center gap-3">
+    <button className="flex bg-secondary p-4 rounded-full animate-pulse items-center gap-3 ">
       {/* svg wpp */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#fff"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="feather feather-phone"
-      >
-        <path d="M23 1l-6 6"></path>
-        <path d="M17 7l-6 6"></path>
-        <path d="M23 7l-6 6"></path>
-      </svg>
+      <FaWhatsapp size={24} color="#fff" />
 
-      <span className="text-white font-bold text-md">Agende sua consulta!</span>
+      <span className="text-white font-bold text-md">{title}</span>
     </button>
   );
 };
