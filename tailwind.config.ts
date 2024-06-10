@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backdropBlur: {
+        glass: "4.5px",
+      },
       backgroundColor: {
         primary: "#F0e9e0",
         secondary: "#AE8F72",
@@ -31,6 +34,8 @@ const config = {
         secondary: "#AE8F72",
         terciary: "#DE9790",
         quaternary: "#2d5262",
+        "glass-white": "rgba(255, 255, 255, 0.05)",
+        "glass-border": "rgba(255, 255, 255, 0.05)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

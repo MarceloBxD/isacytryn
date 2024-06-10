@@ -12,18 +12,18 @@ const NAV_DATA = [
 
 export const Header: React.FC = () => {
   return (
-    <header className="bg-primary w-screen flex items-center justify-between py-7 px-12 h-25">
+    <header className="w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex items-center justify-between px-10 py-6">
       <div>Logo</div>
       <div>
-        <nav>
+        <nav className="hidden lg:flex">
           <ul className="flex gap-5">
             {NAV_DATA.map((navItem) => (
               <li
-                className="relative text-secondary after:content-[''] after:absolute after:hover: after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
+                className="relative text-secondary after:content-[''] after:absolute after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
                 key={navItem.name}
               >
                 <a href={navItem.href}>
-                  <span className="relative block  pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#DE9790] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+                  <span className="relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#DE9790] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
                     {navItem.name}
                   </span>
                 </a>
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
         </nav>
       </div>
       <div>
-        <CtaButton title="Agende sua consulta" />
+        <CtaButton title="Agende sua consulta!" />
       </div>
     </header>
   );

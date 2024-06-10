@@ -14,7 +14,7 @@ const PRESENTATION_DATA = {
 const Presentation: React.FC = () => {
   return (
     <section
-      className={`flex bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-primary bg-center  bg-fixed  bg-opacity-50s`}
+      className={`flex bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-primary bg-center bg-fixed  bg-opacity-50s`}
     >
       <div className="flex container flex-col gap-5 pt-56 justify-left h-full">
         <div className="flex flex-col items-left text-[#2d5262] gap-3">
