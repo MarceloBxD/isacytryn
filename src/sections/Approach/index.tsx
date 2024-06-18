@@ -13,11 +13,11 @@ const APPROACH_DATA = {
     </>
   ),
   description: (
-    <p>
+    <>
       Iremos trabalhar com abordagens baseadas em evidências em uma jornada
       personalizada e adaptada às suas necessidades específicas, rumo à uma
       mudança significativa no enfrentamento de desafios emocionais.
-    </p>
+    </>
   ),
   items: [
     <p>
@@ -47,7 +47,7 @@ const Approach: React.FC = () => {
   return (
     <section className="container my-20 flex gap-10 flex-col md:flex-row">
       <div className="flex-1">
-        <h2 className="text-3xl font-bold text-terciary">
+        <h2 className="text-3xl mb-8 md:mb-2 font-bold text-terciary">
           {APPROACH_DATA.title}
         </h2>
         <h3 className="text-xl text-quaternary">{APPROACH_DATA.subtitle}</h3>

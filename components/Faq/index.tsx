@@ -39,7 +39,7 @@ const FAQ_DATA = [
 
 const Faq: React.FC = () => {
   return (
-    <section className="container my-20">
+    <section id="faq" className="container my-20">
       <h2 className="text-3xl font-bold text-terciary">Perguntas Frequentes</h2>
       <div className="mt-10">
         <Accordion type="multiple">

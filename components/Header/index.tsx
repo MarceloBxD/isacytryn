@@ -2,10 +2,14 @@
 
 import React from "react";
 import { CtaButton } from "../CtaButton";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
+import HamburgerMenu from "../HamburguerMenu";
+import { useApp } from "@/contexts/AppContext";
+import Link from "next/link";
 
-const NAV_DATA = [
+export const NAV_DATA = [
   { name: "Apresentação", href: "/#apresentacao" },
   { name: "Sobre", href: "/#problemas" },
   { name: "Contato", href: "/#minha-abordagem" },
@@ -15,14 +19,27 @@ const NAV_DATA = [
 ];
 
 export const Header: React.FC = () => {
+  const { isOpen, setIsOpen } = useApp();
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex items-center justify-between px-10 py-6"
+      className={` ${
+        isOpen ? "h-screen" : ""
+      } w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex ${
+        isOpen ? "items-start" : "items-center"
+      } justify-between px-10 py-6`}
     >
-      <div>Logo</div>
+      <div className="relative w-48 h-10">
+        <Image
+          src={"/isa_logo_horizontal.png"}
+          layout="fill"
+          className="absolute object-cover object-center"
+          alt="Logo Cytryn"
+        />
+      </div>
       <div>
         <nav className="hidden lg:flex">
           <ul className="flex gap-5">
@@ -41,8 +58,27 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
       </div>
-      <div>
+      <div className="hidden md:block">
         <CtaButton title="Agende sua consulta!" />
+      </div>
+      <div className="block md:hidden">
+        <HamburgerMenu />
+      </div>
+      <div
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } flex-col gap-5 absolute top-20 left-0 w-full p-5 bg-glass-white rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass`}
+      >
+        {NAV_DATA.map((navItem) => (
+          <Link
+            onClick={() => setIsOpen(false)}
+            href={navItem.href}
+            key={navItem.name}
+            className="block md:hidden text-secondary text-lg font-montserrat leading-10 uppercase"
+          >
+            {navItem.name}
+          </Link>
+        ))}
       </div>
     </motion.header>
   );

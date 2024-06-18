@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backdropBlur: {
-        glass: "4.5px",
+        glass: "12px",
       },
       backgroundColor: {
         primary: "#F0e9e0",

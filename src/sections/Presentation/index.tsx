@@ -23,10 +23,11 @@ const FRAMER_ANIMATION = {
 const Presentation: React.FC = () => {
   return (
     <section
-      className={`flex bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-primary bg-center bg-fixed  bg-opacity-50s`}
+      className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-center bg-fixed  bg-opacity-25`}
     >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="flex container flex-col gap-5 pt-56 justify-left h-full">
-        <div className="flex flex-col items-left text-[#2d5262] gap-3">
+        <div className="flex relative flex-col items-left text-white gap-3">
           <motion.h1 {...FRAMER_ANIMATION} className="text-3xl text-left">
             {PRESENTATION_DATA.degree}
           </motion.h1>
@@ -39,13 +40,13 @@ const Presentation: React.FC = () => {
         </div>
         <motion.p
           {...FRAMER_ANIMATION}
-          className="text-lg text-[#2d5262] text-left font-semibold"
+          className="text-lg text-white relative text-left font-semibold"
         >
           {PRESENTATION_DATA.description}
         </motion.p>
-        <div className="flex justify-left">
+        <motion.div {...FRAMER_ANIMATION} className="flex justify-left">
           <CtaButton title="Entre em contato comigo!" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
