@@ -21,7 +21,7 @@ const SOLVE_PROBLEMS_DATA = {
       description: (
         <p>
           Esteja com <b>dificuldade para se concentrar</b>, pensar com clareza e
-          tomar decisões. Parece que a <b>"cabeça não para"</b>.
+          tomar decisões. Parece que a <b>&quot;cabeça não para&quot;</b>.
         </p>
       ),
     },
@@ -59,8 +59,8 @@ const SOLVE_PROBLEMS_DATA = {
       faceIcon: <TfiFaceSad size={24} color="#000" />,
       description: (
         <p>
-          Tenha pensamentos muito <b>autocríticos</b>, como: "não ser bom o
-          suficiente, ser incapaz, não ser amado, não ter valor, etc".
+          Tenha pensamentos muito <b>autocríticos</b>, como: &quot;não ser bom o
+          suficiente, ser incapaz, não ser amado, não ter valor, etc&quot;.
         </p>
       ),
     },

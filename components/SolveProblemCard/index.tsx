@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-type SolveProblemCardProps = {
+interface SolveProblemCardProps extends React.HTMLAttributes<HTMLDivElement> {
   faceIcon: React.ReactNode;
   children: React.ReactNode;
 };
