@@ -2,6 +2,8 @@ import Presentation from "@/sections/Presentation";
 import { Header } from "../../components/Header";
 import SolveProblems from "@/sections/SolveProblems";
 import Approach from "@/sections/Approach";
+import Faq from "../../components/Faq";
+import About from "@/sections/About";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Presentation />
       <SolveProblems />
       <Approach />
+      <About />
+      <Faq />
     </main>
   );
 }

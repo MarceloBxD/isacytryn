@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
@@ -50,13 +53,19 @@ const Approach: React.FC = () => {
         <h3 className="text-xl text-quaternary">{APPROACH_DATA.subtitle}</h3>
         <p className="text-lg text-quaternary">{APPROACH_DATA.description}</p>
       </div>
-      <div className="flex-1 shadow-md p-5 ">
+      <div className="flex-1 p-5 ">
         <ul className="flex flex-col gap-3">
           {APPROACH_DATA.items.map((item, index) => (
-            <div className="flex gap-2" key={index}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex gap-2"
+              key={index}
+            >
               <FaCheck size={24} color="#DE9790" />
               <li>{item}</li>
-            </div>
+            </motion.div>
           ))}
         </ul>
       </div>

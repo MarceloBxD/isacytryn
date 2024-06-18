@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { CtaButton } from "../../../components/CtaButton";
+import { motion } from "framer-motion";
 
 const PRESENTATION_DATA = {
   degree: "Psicóloga clínica especializada em adultos",
@@ -11,6 +14,12 @@ const PRESENTATION_DATA = {
   bgImg: "/images/bg.jpg",
 };
 
+const FRAMER_ANIMATION = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.8 },
+};
+
 const Presentation: React.FC = () => {
   return (
     <section
@@ -18,14 +27,22 @@ const Presentation: React.FC = () => {
     >
       <div className="flex container flex-col gap-5 pt-56 justify-left h-full">
         <div className="flex flex-col items-left text-[#2d5262] gap-3">
-          <h1 className="text-3xl text-left">{PRESENTATION_DATA.degree}</h1>
-          <h2 className="text-2xl font-bold text-left">
+          <motion.h1 {...FRAMER_ANIMATION} className="text-3xl text-left">
+            {PRESENTATION_DATA.degree}
+          </motion.h1>
+          <motion.h2
+            {...FRAMER_ANIMATION}
+            className="text-2xl font-bold text-left"
+          >
             {PRESENTATION_DATA.specialty}
-          </h2>
+          </motion.h2>
         </div>
-        <p className="text-lg text-[#2d5262] text-left font-semibold">
+        <motion.p
+          {...FRAMER_ANIMATION}
+          className="text-lg text-[#2d5262] text-left font-semibold"
+        >
           {PRESENTATION_DATA.description}
-        </p>
+        </motion.p>
         <div className="flex justify-left">
           <CtaButton title="Entre em contato comigo!" />
         </div>

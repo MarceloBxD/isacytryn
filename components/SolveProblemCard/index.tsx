@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 type SolveProblemCardProps = {
@@ -10,7 +12,10 @@ const SolveProblemCard: React.FC<SolveProblemCardProps> = ({
   children,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
       className={`flex gap-4 p-4 bg-white shadow-md rounded-lg items-center hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-default`}
     >
       <div
@@ -21,7 +26,7 @@ const SolveProblemCard: React.FC<SolveProblemCardProps> = ({
       <div className={`text-quaternary text-left font-semibold text-lg`}>
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

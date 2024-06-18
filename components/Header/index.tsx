@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import { CtaButton } from "../CtaButton";
+
+import { motion } from "framer-motion";
 
 const NAV_DATA = [
   { name: "Apresentação", href: "/#apresentacao" },
@@ -12,7 +16,12 @@ const NAV_DATA = [
 
 export const Header: React.FC = () => {
   return (
-    <header className="w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex items-center justify-between px-10 py-6">
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex items-center justify-between px-10 py-6"
+    >
       <div>Logo</div>
       <div>
         <nav className="hidden lg:flex">
@@ -35,6 +44,6 @@ export const Header: React.FC = () => {
       <div>
         <CtaButton title="Agende sua consulta!" />
       </div>
-    </header>
+    </motion.header>
   );
 };
