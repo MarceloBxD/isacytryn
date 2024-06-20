@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppProvider } from "@/contexts/AppContext";
 import MetaTags from "../../components/MetaTags";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,11 @@ export const metadata: Metadata = {
   description: "Isa Cytryn - Psicóloga",
 };
 
-export const HEAD = <MetaTags />;
+export const HEAD = (
+  <Head>
+    <MetaTags />
+  </Head>
+);
 
 export default function RootLayout({
   children,
