@@ -1,24 +1,20 @@
 "use client";
 
+// native imports
 import React from "react";
-import { CtaButton } from "../../../components/CtaButton";
 import { motion } from "framer-motion";
 
-const PRESENTATION_DATA = {
-  degree: "Psicóloga clínica especializada em adultos",
-  specialty: "Terapia cognitivo-comportamental",
-  description:
-    "Talvez você esteja enfrentando alguma dificuldade e sua ansiedade está interferindo na capacidade de pensar com clareza, resolver problemas ou mesmo ter prazer. Se algo está gerando sofrimento em sua vida, isso importa, exige cuidado, e eu estou aqui para ajudar.",
-  preCta:
-    "Dê uma chance para si mesmo e marque uma sessão de terapia. Nunca é tarde para (re)começar.",
-  bgImg: "/images/bg.jpg",
-};
+// components
+import { CtaButton } from "../../../components/CtaButton";
 
-const FRAMER_ANIMATION = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  transition: { duration: 0.8 },
-};
+// amimation
+import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+
+// data
+import { PRESENTATION_DATA } from "@/data";
+
+// assets
+import ArrowDown from "@/assets/ArrowDown";
 
 const Presentation: React.FC = () => {
   return (
@@ -26,27 +22,36 @@ const Presentation: React.FC = () => {
       className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-center bg-fixed  bg-opacity-25`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="flex container flex-col gap-5 pt-56 justify-left h-full">
+      <div className="flex container flex-col gap-5 pt-12 md:pt-56 justify-left h-full">
         <div className="flex relative flex-col items-left text-white gap-3">
-          <motion.h1 {...FRAMER_ANIMATION} className="text-3xl text-left">
+          <motion.h1
+            {...FADE_IN_BASIC_ANIMATION}
+            className="text-3xl text-left"
+          >
             {PRESENTATION_DATA.degree}
           </motion.h1>
           <motion.h2
-            {...FRAMER_ANIMATION}
+            {...FADE_IN_BASIC_ANIMATION}
             className="text-2xl font-bold text-left"
           >
             {PRESENTATION_DATA.specialty}
           </motion.h2>
         </div>
         <motion.p
-          {...FRAMER_ANIMATION}
+          {...FADE_IN_BASIC_ANIMATION}
           className="text-lg text-white relative text-left font-semibold"
         >
           {PRESENTATION_DATA.description}
         </motion.p>
-        <motion.div {...FRAMER_ANIMATION} className="flex justify-left">
+        <motion.div
+          {...FADE_IN_BASIC_ANIMATION}
+          className="hidden md:flex justify-left"
+        >
           <CtaButton title="Entre em contato comigo!" />
         </motion.div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-5">
+        <ArrowDown />
       </div>
     </section>
   );

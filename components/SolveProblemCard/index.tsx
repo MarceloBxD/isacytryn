@@ -5,7 +5,7 @@ import React from "react";
 interface SolveProblemCardProps extends React.HTMLAttributes<HTMLDivElement> {
   faceIcon: React.ReactNode;
   children: React.ReactNode;
-};
+}
 
 const SolveProblemCard: React.FC<SolveProblemCardProps> = ({
   faceIcon,
@@ -16,6 +16,7 @@ const SolveProblemCard: React.FC<SolveProblemCardProps> = ({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
+      whileHover={{ scale: 1.05 }}
       className={`flex gap-4 p-4 bg-white shadow-md rounded-lg items-center hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-default`}
     >
       <div

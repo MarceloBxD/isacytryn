@@ -1,34 +1,32 @@
 "use client";
 
+// native imports
 import React from "react";
-import { CtaButton } from "../CtaButton";
-import Image from "next/image";
-
-import { motion } from "framer-motion";
-import HamburgerMenu from "../HamburguerMenu";
-import { useApp } from "@/contexts/AppContext";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
-export const NAV_DATA = [
-  { name: "Apresentação", href: "/#apresentacao" },
-  { name: "Sobre", href: "/#problemas" },
-  { name: "Contato", href: "/#minha-abordagem" },
-  { name: "Sobre Mim", href: "/#sobre-mim" },
-  { name: "Feedbacks", href: "/#feedbacks" },
-  { name: "FAQ", href: "/#faq" },
-];
+import { CtaButton } from "../CtaButton";
+import HamburgerMenu from "../HamburguerMenu";
+
+// context
+import { useApp } from "@/contexts/AppContext";
+
+// data
+import { NAV_DATA } from "@/data";
+
+// animations
+import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 
 export const Header: React.FC = () => {
   const { isOpen, setIsOpen } = useApp();
 
   return (
     <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      {...FADE_IN_BASIC_ANIMATION}
       className={` ${
-        isOpen ? "h-screen" : ""
-      } w-full bg-glass-white fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex ${
+        isOpen ? "h-screen bg-white bg-opacity-100" : ""
+      } w-full z-50 fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex ${
         isOpen ? "items-start" : "items-center"
       } justify-between px-10 py-6`}
     >
@@ -40,6 +38,7 @@ export const Header: React.FC = () => {
           alt="Logo Cytryn"
         />
       </div>
+      {/* Show NAV in Desktop */}
       <div>
         <nav className="hidden lg:flex">
           <ul className="flex gap-5">
@@ -48,26 +47,30 @@ export const Header: React.FC = () => {
                 className="relative text-secondary after:content-[''] after:absolute after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
                 key={navItem.name}
               >
-                <a href={navItem.href}>
+                <Link href={navItem.href}>
                   <span className="relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#DE9790] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
                     {navItem.name}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
       </div>
+      {/* Show NAV in Desktop */}
       <div className="hidden md:block">
         <CtaButton title="Agende sua consulta!" />
       </div>
+      {/* Show Hamburguer menu in Mobile */}
       <div className="block md:hidden">
         <HamburgerMenu />
       </div>
+      {/* Show Hamburguer menu in Mobile */}
+      {/* Show NAV in Mobile */}
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } flex-col gap-5 absolute top-20 left-0 w-full p-5 bg-glass-white rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass`}
+        } flex-col gap-5 absolute top-20 left-0 w-full p-5 rounded-lg  bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass`}
       >
         {NAV_DATA.map((navItem) => (
           <Link
@@ -80,6 +83,7 @@ export const Header: React.FC = () => {
           </Link>
         ))}
       </div>
+      {/* Show NAV in Mobile */}
     </motion.header>
   );
 };

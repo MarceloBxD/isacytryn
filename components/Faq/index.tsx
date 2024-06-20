@@ -1,5 +1,7 @@
+// native imports
 import React from "react";
 
+// components
 import {
   Accordion,
   AccordionContent,
@@ -7,35 +9,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQ_DATA = [
-  {
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-  },
-  {
-    question: "Is it responsive?",
-    answer: "Yes. It's built with Tailwind CSS and is fully responsive.",
-  },
-  {
-    question: "Is it production-ready?",
-    answer: "Yes. It's built with best practices and is ready for production.",
-  },
-  {
-    question: "Is it SEO-friendly?",
-    answer:
-      "Yes. It's built with SEO in mind and is optimized for search engines.",
-  },
-  {
-    question: "Is it customizable?",
-    answer:
-      "Yes. It's highly customizable and can be easily modified to fit your needs.",
-  },
-  {
-    question: "Is it well-documented?",
-    answer:
-      "Yes. It comes with detailed documentation to help you get started.",
-  },
-];
+// data
+import { FAQ_DATA } from "@/data";
 
 const Faq: React.FC = () => {
   return (

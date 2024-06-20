@@ -1,6 +1,11 @@
+// native imports
 import React from "react";
+import { motion } from "framer-motion";
+
+// icons
 import { TfiFaceSad } from "react-icons/tfi";
 
+// components
 import SolveProblemCard from "../../../components/SolveProblemCard";
 
 const SOLVE_PROBLEMS_DATA = {
@@ -80,7 +85,7 @@ const SolveProblems: React.FC = () => {
     my-10
 `}
     >
-      <div
+      <motion.div
         className={`
         col-span-full
         flex
@@ -99,7 +104,7 @@ const SolveProblems: React.FC = () => {
         <p className="text-xl mb-10 md:text-2xl lg:text-4xl text-center">
           {SOLVE_PROBLEMS_DATA.description}
         </p>
-      </div>
+      </motion.div>
       {SOLVE_PROBLEMS_DATA.items.map((problem, index) => (
         <SolveProblemCard key={index} faceIcon={problem.faceIcon}>
           {problem.description}
