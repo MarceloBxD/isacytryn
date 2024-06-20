@@ -12,11 +12,7 @@ export const metadata: Metadata = {
   description: "Isa Cytryn - Psicóloga",
 };
 
-export const HEAD = (
-  <Head>
-    <MetaTags />
-  </Head>
-);
+export const HEAD = <MetaTags />;
 
 export default function RootLayout({
   children,
@@ -26,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <AppProvider>
-        {HEAD}
+        <Head>{HEAD}</Head>
         <body className={inter.className}>{children}</body>
       </AppProvider>
     </html>
