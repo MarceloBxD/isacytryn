@@ -75,6 +75,7 @@ const SOLVE_PROBLEMS_DATA = {
 const SolveProblems: React.FC = () => {
   return (
     <section
+      id="solve-problems"
       className={`
     grid
     grid-cols-1

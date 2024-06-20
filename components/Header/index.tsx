@@ -1,7 +1,7 @@
 "use client";
 
 // native imports
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -16,23 +16,45 @@ import { useApp } from "@/contexts/AppContext";
 import { NAV_DATA } from "@/data";
 
 // animations
-import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+import { HEADER_ANIMATION } from "@/utils/animations";
 
 export const Header: React.FC = () => {
   const { isOpen, setIsOpen } = useApp();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <motion.header
-      {...FADE_IN_BASIC_ANIMATION}
+      {...HEADER_ANIMATION}
       className={` ${
         isOpen ? "h-screen bg-white bg-opacity-100" : ""
-      } w-full z-50 fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass flex ${
+      } w-full z-50 fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass border border-glass-border shadow-glass flex ${
         isOpen ? "items-start" : "items-center"
       } justify-between px-10 py-6`}
     >
       <div className="relative w-48 h-10">
         <Image
-          src={"/isa_logo_horizontal.png"}
+          src={
+            scrolled
+              ? "/isa_logo_horizontal.png"
+              : isOpen
+              ? "/isa_logo_horizontal.png"
+              : "/isa_logo_horizontal_branco.png"
+          }
           layout="fill"
           className="absolute object-cover object-center"
           alt="Logo Cytryn"
@@ -44,11 +66,19 @@ export const Header: React.FC = () => {
           <ul className="flex gap-5">
             {NAV_DATA.map((navItem) => (
               <li
-                className="relative text-secondary after:content-[''] after:absolute after:left-full after:mx-5 after:text-white after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-['']"
+                className={`relative after:content-[''] after:absolute after:left-full after:mx-5 after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-[''] ${
+                  scrolled
+                    ? "text-secondary after:text-secondary"
+                    : "text-white after:text-white"
+                }`}
                 key={navItem.name}
               >
                 <Link href={navItem.href}>
-                  <span className="relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#DE9790] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
+                  <span
+                    className={`relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[${
+                      scrolled ? "#FFFFFF" : "#DE9790"
+                    }] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100`}
+                  >
                     {navItem.name}
                   </span>
                 </Link>

@@ -15,6 +15,7 @@ import { PRESENTATION_DATA } from "@/data";
 
 // assets
 import ArrowDown from "@/assets/ArrowDown";
+import Link from "next/link";
 
 const Presentation: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const Presentation: React.FC = () => {
       className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-center bg-fixed  bg-opacity-25`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="flex container flex-col gap-5 pt-12 md:pt-56 justify-left h-full">
+      <div className="flex container flex-col gap-5 pt-32 md:pt-56 justify-left h-full">
         <div className="flex relative flex-col items-left text-white gap-3">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}
@@ -51,7 +52,9 @@ const Presentation: React.FC = () => {
         </motion.div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-5">
-        <ArrowDown />
+        <Link href="/#solve-problems">
+          <ArrowDown />
+        </Link>
       </div>
     </section>
   );
