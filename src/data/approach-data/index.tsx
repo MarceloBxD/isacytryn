@@ -14,22 +14,22 @@ const APPROACH_DATA = {
     </>
   ),
   items: [
-    <p>
+    <p key={0}>
       Oferecem <b>tratamento efetivo</b> para uma variedade de problemas
       psicológicos, incluindo depressão, ansiedade, estresse, pânico e questões
       relacionadas à autoestima e confiança.
     </p>,
-    <p>
+    <p key={1}>
       Utilizam <b>estratégias validadas</b> e individualizas para ajudar no
       manejo de pensamentos, emoções, sensações corporais e comportamentos que
       contribuem para o mal-estar.
     </p>,
-    <p>
+    <p key={2}>
       <b>Encorajam a aceitação</b> de experiências internas dolorosas ou
       inevitáveis, permitindo uma melhor adaptação e resposta às situações da
       vida sem resistência desnecessária.
     </p>,
-    <p>
+    <p key={3}>
       Ajudam na <b>identificação e alinhamento com valores pessoais</b>,
       orientando mudanças comportamentais consistentes com o que é
       verdadeiramente importante para você.
