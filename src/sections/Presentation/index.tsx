@@ -51,11 +51,6 @@ const Presentation: React.FC = () => {
           <CtaButton title="Entre em contato comigo!" />
         </motion.div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-5">
-        <Link href="/#solve-problems">
-          <ArrowDown />
-        </Link>
-      </div>
     </section>
   );
 };

@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
       {...HEADER_ANIMATION}
       className={` ${
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
-      } w-full z-50 fixed top-0 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-glass border border-glass-border shadow-glass flex ${
+      } w-full z-50 top-0 bg-secondary rounded-lg flex ${
         isOpen ? "items-start" : "items-center"
       } justify-between px-10 py-6`}
     >
