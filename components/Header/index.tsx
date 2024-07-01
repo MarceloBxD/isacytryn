@@ -47,18 +47,20 @@ export const Header: React.FC = () => {
       } justify-between px-10 py-6`}
     >
       <div className="relative w-48 h-10">
-        <Image
-          src={
-            scrolled
-              ? "/isa_logo_horizontal.png"
-              : isOpen
-              ? "/isa_logo_horizontal.png"
-              : "/isa_logo_horizontal_branco.png"
-          }
-          layout="fill"
-          className="absolute object-cover object-center"
-          alt="Logo Cytryn"
-        />
+        <Link href="/">
+          <Image
+            src={
+              scrolled
+                ? "/isa_logo_horizontal.png"
+                : isOpen
+                ? "/isa_logo_horizontal.png"
+                : "/isa_logo_horizontal_branco.png"
+            }
+            layout="fill"
+            className="absolute object-cover object-center"
+            alt="Logo Cytryn"
+          />
+        </Link>
       </div>
       {/* Show NAV in Desktop */}
       <div>

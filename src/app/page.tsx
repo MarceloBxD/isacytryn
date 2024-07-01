@@ -17,7 +17,7 @@ export default function Home() {
       <Approach />
       <About />
       <Faq />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

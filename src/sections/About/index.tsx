@@ -8,6 +8,9 @@ import { FaCheck } from "react-icons/fa";
 // data
 import { ABOUT_DATA } from "@/data";
 
+// image
+import Image from "next/image";
+
 const About: React.FC = () => {
   return (
     <motion.section className="container">
@@ -17,8 +20,8 @@ const About: React.FC = () => {
           Isabela Cytryn
         </div>
       </div>
-      <div className="mt-8">
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
+      <div className="mt-8 flex-col md:flex md:flex-row gap-4">
+        <ul className="grid grid-cols-1 gap-4 text-black">
           {ABOUT_DATA.map((aboutItem, index) => (
             <li
               key={index}
@@ -29,6 +32,15 @@ const About: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="border rounded border-black flex-1 relative w-full">
+          <Image
+            src="/isa_foto.png"
+            width={300}
+            height={300}
+            className="rounded-lg object-cover object-center"
+            alt="Isabela Cytryn"
+          />
+        </div>
       </div>
     </motion.section>
   );
