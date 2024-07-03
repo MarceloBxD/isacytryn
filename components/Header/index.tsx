@@ -38,13 +38,12 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <motion.header
-      {...HEADER_ANIMATION}
+    <header
       className={` ${
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
       } w-full z-50 top-0 bg-secondary rounded-lg flex ${
         isOpen ? "items-start" : "items-center"
-      } justify-between px-10 py-6`}
+      } justify-between px-10 py-3  `}
     >
       <div className="relative w-48 h-10">
         <Link href="/">
@@ -57,7 +56,7 @@ export const Header: React.FC = () => {
                 : "/isa_logo_horizontal_branco.png"
             }
             layout="fill"
-            className="absolute object-cover object-center"
+            className="object-cover object-bottom"
             alt="Logo Cytryn"
           />
         </Link>
@@ -116,6 +115,6 @@ export const Header: React.FC = () => {
         ))}
       </div>
       {/* Show NAV in Mobile */}
-    </motion.header>
+    </header>
   );
 };

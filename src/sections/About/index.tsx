@@ -20,7 +20,7 @@ const About: React.FC = () => {
           Isabela Cytryn
         </div>
       </div>
-      <div className="mt-8 flex-col md:flex md:flex-row gap-4">
+      <div className="mt-8 flex-col md:flex md:flex-row gap-6 md:gap-4">
         <ul className="grid grid-cols-1 gap-4 text-black">
           {ABOUT_DATA.map((aboutItem, index) => (
             <li
@@ -32,13 +32,12 @@ const About: React.FC = () => {
             </li>
           ))}
         </ul>
-        <div className="border rounded border-black flex-1 relative w-full">
+        <div className="border rounded shadow-lg flex-1 md:max-w-[500px] mx-auto mt-8 md:mt-0 md:mx-0 h-[500px] relative w-full">
           <Image
-            src="/isa_foto.png"
-            width={300}
-            height={300}
-            className="rounded-lg object-cover object-center"
+            src="/images/isa-front-image.jpg"
+            className="rounded-lg w-full bg-center h-full object-cover"
             alt="Isabela Cytryn"
+            layout="fill"
           />
         </div>
       </div>

@@ -20,7 +20,7 @@ import Link from "next/link";
 const Presentation: React.FC = () => {
   return (
     <section
-      className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-center bg-fixed  bg-opacity-25`}
+      className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-fixed  bg-opacity-25`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="flex container flex-col gap-5 pt-32 md:pt-56 justify-left h-full">

@@ -11,16 +11,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="text-black p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="relative w-[320px] h-[200px]">
-          <Link href="/">
-            <Image
-              src="/isa_logo_horizontal_branco.png"
-              layout="fill"
-              className="absolute bg-cover object-cover object-center"
-              alt="Logo Cytryn"
-            />
-          </Link>
-        </div>
         <div>
           <h2 className="text-xl font-semibold mb-4">Endereços</h2>
           <ul>
