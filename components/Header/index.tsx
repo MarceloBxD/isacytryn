@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 import { CtaButton } from "../CtaButton";
 import HamburgerMenu from "../HamburguerMenu";
@@ -88,7 +87,7 @@ export const Header: React.FC = () => {
       </div>
       {/* Show NAV in Desktop */}
       <div className="hidden md:block">
-        <CtaButton title="Agende sua consulta!" />
+        <CtaButton title={"<strong>Agende</strong> sua consulta agora!"} />
       </div>
       {/* Show Hamburguer menu in Mobile */}
       <div className="block md:hidden">

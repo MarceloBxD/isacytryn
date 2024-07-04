@@ -13,13 +13,10 @@ import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 // data
 import { PRESENTATION_DATA } from "@/data";
 
-// assets
-import ArrowDown from "@/assets/ArrowDown";
-import Link from "next/link";
-
 const Presentation: React.FC = () => {
   return (
     <section
+      id="apresentacao"
       className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-fixed  bg-opacity-25`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -48,7 +45,7 @@ const Presentation: React.FC = () => {
           {...FADE_IN_BASIC_ANIMATION}
           className="hidden md:flex justify-left"
         >
-          <CtaButton title="Entre em contato comigo!" />
+          <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
         </motion.div>
       </div>
     </section>

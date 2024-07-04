@@ -7,6 +7,7 @@ import { TfiFaceSad } from "react-icons/tfi";
 
 // components
 import SolveProblemCard from "../../../components/SolveProblemCard";
+import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 
 const SOLVE_PROBLEMS_DATA = {
   title: "ANSIEDADE, DEPRESSÃO, ESTRESSE, ANGÚSTIA...",
@@ -75,7 +76,7 @@ const SOLVE_PROBLEMS_DATA = {
 const SolveProblems: React.FC = () => {
   return (
     <section
-      id="solve-problems"
+      id="solucao-de-problemas"
       className={`
     grid
     grid-cols-1
@@ -99,12 +100,18 @@ const SolveProblems: React.FC = () => {
         text-quaternary
         `}
       >
-        <h2 className="text-lg md:text-xl tracking-wider lg:text-2xl text-terciary font-bold text-center">
+        <motion.h2
+          {...FADE_IN_BASIC_ANIMATION}
+          className="text-lg md:text-xl tracking-wider lg:text-2xl text-terciary font-bold text-center"
+        >
           {SOLVE_PROBLEMS_DATA.title}
-        </h2>
-        <p className="text-xl mb-10 md:text-2xl lg:text-4xl text-center">
+        </motion.h2>
+        <motion.p
+          {...FADE_IN_BASIC_ANIMATION}
+          className="text-xl mb-10 md:text-2xl lg:text-4xl text-center"
+        >
           {SOLVE_PROBLEMS_DATA.description}
-        </p>
+        </motion.p>
       </motion.div>
       {SOLVE_PROBLEMS_DATA.items.map((problem, index) => (
         <SolveProblemCard key={index} faceIcon={problem.faceIcon}>
