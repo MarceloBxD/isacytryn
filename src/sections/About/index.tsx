@@ -40,7 +40,7 @@ const About: React.FC = () => {
               className="text-lg lg:text-md flex items-center mb-2 p-1 gap-2 "
             >
               <FaCheck size={15} color="#DE9790" />
-              <span className="ml-2 text-sm md:text-md">{aboutItem}</span>
+              <span className="ml-2 text-sm md:text-lg">{aboutItem}</span>
             </motion.li>
           ))}
         </ul>
