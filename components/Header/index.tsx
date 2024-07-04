@@ -16,8 +16,6 @@ import { useApp } from "@/contexts/AppContext";
 import { NAV_DATA } from "@/data";
 
 // animations
-import { HEADER_ANIMATION } from "@/utils/animations";
-
 export const Header: React.FC = () => {
   const { isOpen, setIsOpen } = useApp();
   const [scrolled, setScrolled] = useState(false);
@@ -39,11 +37,11 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={` ${
+      className={`${
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
       } w-full z-50 top-0 bg-secondary rounded-lg flex ${
         isOpen ? "items-start" : "items-center"
-      } justify-between px-10 py-3  `}
+      } justify-between px-10 py-6 md:py-3`}
     >
       <div className="relative w-48 h-10">
         <Link href="/">
@@ -101,7 +99,7 @@ export const Header: React.FC = () => {
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } flex-col gap-5 absolute top-20 left-0 w-full p-5 rounded-lg  bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass`}
+        } flex-col gap-5 absolute top-20 left-10 w-full p-5 rounded-lg  bg-clip-padding backdrop-filter backdrop-blur-glass bg-opacity-10 border border-glass-border shadow-glass`}
       >
         {NAV_DATA.map((navItem) => (
           <Link
