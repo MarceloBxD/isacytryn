@@ -41,10 +41,7 @@ const Presentation: React.FC = () => {
         >
           {PRESENTATION_DATA.description}
         </motion.p>
-        <motion.div
-          {...FADE_IN_BASIC_ANIMATION}
-          className="hidden md:flex justify-left"
-        >
+        <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex justify-left">
           <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
         </motion.div>
       </div>
