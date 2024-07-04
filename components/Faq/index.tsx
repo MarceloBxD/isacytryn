@@ -11,10 +11,16 @@ import {
 
 // data
 import { FAQ_DATA } from "@/data";
+import { motion } from "framer-motion";
+import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 
 const Faq: React.FC = () => {
   return (
-    <section id="faq" className="container my-20">
+    <motion.section
+      {...FADE_IN_BASIC_ANIMATION}
+      id="faq"
+      className="container my-20"
+    >
       <h2 className="text-3xl font-bold text-terciary">Perguntas Frequentes</h2>
       <div className="mt-10">
         <Accordion type="multiple">
@@ -28,7 +34,7 @@ const Faq: React.FC = () => {
           ))}
         </Accordion>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Faq;
