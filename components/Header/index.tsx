@@ -34,6 +34,15 @@ export const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Adiciona ou remove a classe "no-scroll" no body com base em `isOpen`
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   return (
     <header
       className={`${
