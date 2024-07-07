@@ -42,9 +42,10 @@ export const Header: React.FC = () => {
         isOpen ? "items-start" : "items-center"
       } justify-between px-10 py-6 md:py-3`}
     >
-      <div className="relative w-48 h-10">
+      <div className="relative h-10 md:h-12 p-2 w-48 md:w-56">
         <Link href="/">
           <Image
+            quality={100}
             src={
               scrolled
                 ? "/isa_logo_horizontal.png"
@@ -53,7 +54,7 @@ export const Header: React.FC = () => {
                 : "/isa_logo_horizontal_branco.png"
             }
             layout="fill"
-            className="object-cover object-bottom"
+            className="object-cover object-bottom bg-center bg-cover"
             alt="Logo Cytryn"
           />
         </Link>

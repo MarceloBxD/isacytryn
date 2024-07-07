@@ -29,9 +29,11 @@ const IMAGES_TO_SLIDE = [
 const SwiperComponent: React.FC = () => {
   return (
     <Swiper
-      className="h-[calc(100vh-85px)] md:h-[calc(100vh-65.6px)] w-screen z-0"
+      className="h-[calc(100vh-85px)] md:h-[calc(100vh-65.6px)] w-screen custom-swiper"
       pagination={{
         clickable: true,
+        enabled: true,
+        dynamicBullets: true,
       }}
       loop={true}
       modules={[Pagination, Autoplay]}
@@ -43,6 +45,7 @@ const SwiperComponent: React.FC = () => {
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
+      // fix pagination on mobile
     >
       {IMAGES_TO_SLIDE.map((image, index) => (
         <SwiperSlide key={index}>

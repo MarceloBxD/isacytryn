@@ -84,7 +84,6 @@ const SolveProblems: React.FC = () => {
     lg:grid-cols-3
     gap-5
     container
-    my-10
 `}
     >
       <motion.div

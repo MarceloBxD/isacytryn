@@ -22,6 +22,7 @@ const SOCIAL_MEDIA_ITEMS = [
     name: "Facebook",
     image: <FaFacebookF size={32} color="#fff" />,
     bgOnHover: "#1877F2",
+    href: "https://www.facebook.com/IsabelaCytrynPsicologa",
   },
   {
     id: 3,
@@ -45,12 +46,14 @@ const Footer: React.FC = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         <div className="flex justify-center w-screen h-[220px] md:h-[300px]  items-center bg-secondary/50 ">
           {SOCIAL_MEDIA_ITEMS.map((item) => (
-            <div
+            <Link
+              target="_blank"
               key={item.id}
+              href={item.href}
               className={`flex items-center justify-center w-full cursor-pointer  hover:bg-primary h-full transition-colors duration-300`}
             >
               {item.image}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

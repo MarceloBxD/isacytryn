@@ -26,10 +26,10 @@ const Faq: React.FC = () => {
         <Accordion type="multiple">
           {FAQ_DATA.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left">
-                {faq.question}
+              <AccordionTrigger className="text-left ">
+                <p className="max-w-[90%]">{faq.question}</p>
               </AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent className="">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
