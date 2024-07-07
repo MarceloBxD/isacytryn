@@ -29,7 +29,7 @@ const IMAGES_TO_SLIDE = [
 const SwiperComponent: React.FC = () => {
   return (
     <Swiper
-      className="h-[calc(100vh-85px)] md:h-[calc(100vh-65.6px)] w-screen custom-swiper"
+      className="h-[calc(100vh-85px)] max-w-screen md:h-[calc(100vh-65.6px)] custom-swiper"
       pagination={{
         clickable: true,
         enabled: true,
