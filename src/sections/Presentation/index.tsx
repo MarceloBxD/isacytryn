@@ -3,24 +3,69 @@
 // native imports
 import React from "react";
 import { motion } from "framer-motion";
-
+import "../../app/globals.css";
 // components
 import { CtaButton } from "../../../components/CtaButton";
 
-// amimation
+// animation
 import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+import Image from "next/image";
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// swiper modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 // data
 import { PRESENTATION_DATA } from "@/data";
 
+const IMAGES_TO_SLIDE = [
+  "/images/bg.jpg",
+  "/images/bg.jpg",
+  "/images/bg.jpg",
+  "/images/bg.jpg",
+];
+
+const SwiperComponent: React.FC = () => {
+  return (
+    <Swiper
+      className="h-[calc(100vh-85px)] md:h-[calc(100vh-65.6px)] w-screen z-0"
+      pagination={{
+        clickable: true,
+      }}
+      loop={true}
+      modules={[Pagination, Autoplay]}
+      parallax={true}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      slidesPerView={1}
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      {IMAGES_TO_SLIDE.map((image, index) => (
+        <SwiperSlide key={index}>
+          <div className="h-screen w-screen relative">
+            <Image
+              src={image}
+              alt="Picture of the author"
+              layout="fill"
+              objectFit="cover"
+            />
+            <div className="absolute inset-0 bg-black opacity-70"></div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
+
 const Presentation: React.FC = () => {
   return (
-    <section
-      id="apresentacao"
-      className={`flex relative bg-hero-pattern object-cover position-center bg-cover bg-no-repeat h-screen w-screen bg-fixed  bg-opacity-25`}
-    >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="flex container flex-col gap-5 pt-32 md:pt-56 justify-left h-full">
+    <section id="apresentacao" className="relative h-screen w-screen">
+      <SwiperComponent />
+      <div className="absolute inset-0 flex flex-col gap-5 pt-24 md:pt-40 justify-left container mx-auto z-10">
         <div className="flex relative flex-col items-left text-white gap-3">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}

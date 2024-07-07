@@ -15,6 +15,7 @@ const SOCIAL_MEDIA_ITEMS = [
     name: "Instagram",
     image: <FaInstagram size={32} color="#fff" />,
     bgOnHover: "#E1306C",
+    href: "https://www.instagram.com/psi.isabelacytryn/",
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const SOCIAL_MEDIA_ITEMS = [
         height={32}
       />
     ),
+    href: "https://www.doctoralia.com.br/isabela-cytryn-2",
   },
 ];
 
@@ -54,12 +56,15 @@ const Footer: React.FC = () => {
       </div>
       <div className="flex flex-col py-5 bg-primary  items-center justify-center w-full">
         <div className="flex flex-col items-center justify-center w-full">
-          <div className="flex flex-col items-center justify-center w-full mb-5">
-            <h1 className="text-2xl font-bold text-black">Endereço</h1>
+          <div className="flex flex-col items-center justify-center w-full mb-5 gap-2">
+            <h1 className="text-xl md:text-2xl font-bold text-black">
+              Endereço
+            </h1>
             <p className="text-md md:text-lg max-w-[350px] md:max-w-full text-center mt-2 text-black">
               Rua Capitão Salomão, 63 - Humaitá - Rio de Janeiro, RJ
             </p>
-            <p className="text-lg"></p>
+            <p className="text-md md:text-lg font-bold">CRP: 05/69829</p>
+            <p className="text-md md:text-lg">Isabela Fernandes Cytryn</p>
           </div>
           <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
         </div>
