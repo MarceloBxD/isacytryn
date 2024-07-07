@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Sora, Raleway } from "next/font/google";
 import { AppProvider } from "@/contexts/AppContext";
 import MetaTags from "../../components/MetaTags";
 
@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   title: "Isa Cytryn",
   description: "Isa Cytryn - Psicóloga",
 };
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Adicione os pesos desejados
+});
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Adicione os pesos desejados
+});
 
 export const HEAD = <MetaTags />;
 
@@ -21,8 +31,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <AppProvider>
-       {HEAD}
-        <body className={inter.className}>{children}</body>
+        {HEAD}
+        <body className={raleway.className}>{children}</body>
       </AppProvider>
     </html>
   );
