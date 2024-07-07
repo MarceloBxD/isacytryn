@@ -17,7 +17,7 @@ export default function Home() {
       <SolveProblems />
       <Approach />
       <About />
-      <Feedbacks />
+      {/* <Feedbacks /> */}
       <Faq />
       <Footer />
     </main>
