@@ -7,6 +7,7 @@ import Approach from "@/sections/Approach";
 import Faq from "../../components/Faq";
 import About from "@/sections/About";
 import Footer from "../../components/Footer";
+import Feedbacks from "@/sections/Feedbacks";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <SolveProblems />
       <Approach />
       <About />
+      <Feedbacks />
       <Faq />
       <Footer />
     </main>
