@@ -8,6 +8,7 @@ import Faq from "../../components/Faq";
 import About from "@/sections/About";
 import Footer from "../../components/Footer";
 import Feedbacks from "@/sections/Feedbacks";
+import BackToTopButton from "../../components/BackToTopButton";
 
 export default function Home() {
   return (

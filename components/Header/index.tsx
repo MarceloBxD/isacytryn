@@ -49,9 +49,9 @@ export const Header: React.FC = () => {
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
       } w-full z-50 top-0 bg-secondary rounded-lg flex ${
         isOpen ? "items-start" : "items-center"
-      } justify-between px-10 py-6 md:py-3`}
+      } justify-between px-10 py-6 md:py-2`}
     >
-      <div className="relative h-10 md:h-12 p-2 w-48 md:w-56">
+      <div className="relative h-10 md:h-14 w-48 md:w-64">
         <Link href="/">
           <Image
             quality={100}
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
                 : "/isa_logo_horizontal_branco.png"
             }
             layout="fill"
-            className="object-cover object-bottom bg-center bg-cover"
+            className="object-cover bg-center bg-cover"
             alt="Logo Cytryn"
           />
         </Link>

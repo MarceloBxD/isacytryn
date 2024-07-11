@@ -17,14 +17,18 @@ const Approach: React.FC = () => {
   return (
     <motion.section className="container my-20 flex gap-10 flex-col md:flex-row">
       <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
-        <motion.h2 className="text-3xl mb-8 md:mb-2 font-bold text-terciary">
+        <motion.h2 className="text-xl md:text-3xl mb-8 md:mb-2 font-bold text-terciary">
           {APPROACH_DATA.title}
         </motion.h2>
-        <h3 className="text-xl text-quaternary">{APPROACH_DATA.subtitle}</h3>
-        <p className="text-lg text-quaternary">{APPROACH_DATA.description}</p>
+        <h3 className="text-lg md:text-xl text-quaternary">
+          {APPROACH_DATA.subtitle}
+        </h3>
+        <p className="text-md md:text-lg mt-3 text-quaternary max-w-[90%]">
+          {APPROACH_DATA.description}
+        </p>
       </motion.div>
       <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1 p-2">
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-3 bg-quaternary p-4 rounded-xl border-4 border-terciary">
           {APPROACH_DATA.items.map((item, index) => (
             <motion.div
               initial={{ opacity: 0 }}
@@ -34,7 +38,7 @@ const Approach: React.FC = () => {
               key={index}
             >
               <FaCheck size={42} color="#DE9790" />
-              <li className="ml-3">{item}</li>
+              <li className="ml-3 text-white">{item}</li>
             </motion.div>
           ))}
         </ul>

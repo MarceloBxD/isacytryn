@@ -85,9 +85,15 @@ const Presentation: React.FC = () => {
         </div>
         <motion.p
           {...FADE_IN_BASIC_ANIMATION}
-          className="text-lg text-white relative text-left font-semibold"
+          className="text-lg text-white relative md:max-w-[50%] text-left"
         >
           {PRESENTATION_DATA.description}
+        </motion.p>
+        <motion.p
+          {...FADE_IN_BASIC_ANIMATION}
+          className="text-lg text-white relative md:max-w-[45%] text-left font-semibold"
+        >
+          {PRESENTATION_DATA.preCta}
         </motion.p>
         <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex justify-left">
           <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />

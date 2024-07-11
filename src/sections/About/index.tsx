@@ -11,6 +11,7 @@ import { ABOUT_DATA } from "@/data";
 
 // image
 import Image from "next/image";
+import { CtaButton } from "../../../components/CtaButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,10 +77,13 @@ const About: React.FC = () => {
 
   return (
     <section id="sobre-mim" className="relative container p-6 md:p-12 lg:p-24">
-      <h2 className="text-3xl font-bold text-terciary mb-6 md:mb-12">Sobre</h2>
-      <div>
-        <div className="text-quaternary w-fit relative text-xl md:text-2xl lg:text-3xl font-bold mt-8 mb-6 md:mb-12">
+      <h2 className="text-3xl w-fit font-bold text-terciary mb-6 md:mb-12">
+        Sobre
+      </h2>
+      <div className="relative">
+        <div className="text-quaternary relative w-fit text-xl md:text-2xl lg:text-3xl font-bold mt-8 mb-6 md:mb-12">
           Isabela Cytryn
+          <div className="w-full mt-2 h-1 bg-quaternary mb-8" />
         </div>
       </div>
       <div className="relative mt-8 flex-col md:flex md:flex-row gap-6 md:gap-10">
@@ -87,12 +91,20 @@ const About: React.FC = () => {
           {ABOUT_DATA.map((aboutItem, index) => (
             <li
               key={index}
-              className="text-lg lg:text-md flex items-center mb-2 p-1 gap-2"
+              className="text-lg lg:text-md h-fit flex items-center mb-2 p-1 gap-2"
             >
               <FaCheck size={15} color="#DE9790" />
               <span className="ml-2 text-sm md:text-lg">{aboutItem}</span>
             </li>
           ))}
+          <div className="h-1 bg-quaternary my-3 w-full " />
+          <p className="text-quaternary mt-2 max-w-[85%]">
+            Além do meu profissionalismo, você pode esperar uma relação genuína,
+            marcada por confiança, empatia, transparência e autenticidade.{" "}
+          </p>
+          <p className="text-quaternary">
+            Meu objetivo é que você tenha uma vida da qual se orgulhe!
+          </p>
         </ul>
         <div className="relative w-full h-[500px] md:w-[500px] md:h-[500px] mx-auto mt-8 md:mt-0 md:mx-0">
           <div className="absolute inset-0 -z-10 bg-[#F0E9E0] rounded-lg shadow-lg"></div>

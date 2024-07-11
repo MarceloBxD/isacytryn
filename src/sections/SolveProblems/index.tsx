@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 // icons
 import { TfiFaceSad } from "react-icons/tfi";
 
+// nuvem icon
+import { IoCloud } from "react-icons/io5";
+import { Pause } from "lucide-react";
+import { Heart } from "lucide-react";
+import { FaHamburger } from "react-icons/fa";
+import { MessageCircleIcon } from "lucide-react";
+
 // components
 import SolveProblemCard from "../../../components/SolveProblemCard";
 import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
@@ -16,25 +23,25 @@ const SOLVE_PROBLEMS_DATA = {
     {
       faceIcon: <TfiFaceSad size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Lide com <b>preocupações</b> persistentes que dificultam viver no
           presente e criam medo do futuro, do incerto.
         </p>
       ),
     },
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <IoCloud size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Esteja com <b>dificuldade para se concentrar</b>, pensar com clareza e
           tomar decisões. Parece que a <b>&quot;cabeça não para&quot;</b>.
         </p>
       ),
     },
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <Pause size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Esteja sendo <b>prejudicado</b> em mais de uma área da sua vida, como
           trabalho, relacionamentos, saúde física e família, criando uma bola de
           neve.
@@ -42,9 +49,9 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <Heart size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Esteja sentindo{" "}
           <b>sensações físicas desagradáveis ou até incontroláveis</b>, como
           palpitações, falta de ar, desconforto torácico, etc.
@@ -52,9 +59,9 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <FaHamburger size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Tenha criado maus hábitos - como a{" "}
           <b>procrastinação, exagero alimentar, álcool</b> - para lidar com suas
           emoções e, por consequência, se desconectar delas.
@@ -62,9 +69,9 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <MessageCircleIcon size={24} color="#000" />,
       description: (
-        <p>
+        <p className="font-normal">
           Tenha pensamentos muito <b>autocríticos</b>, como: &quot;não ser bom o
           suficiente, ser incapaz, não ser amado, não ter valor, etc&quot;.
         </p>
