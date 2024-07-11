@@ -76,7 +76,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <section id="sobre-mim" className="relative container p-6 md:p-12 lg:p-24">
+    <section id="sobre-mim" className="relative container">
       <h2 className="text-3xl w-fit font-bold text-terciary mb-6 md:mb-12">
         Sobre
       </h2>
