@@ -68,7 +68,7 @@ const Presentation: React.FC = () => {
   return (
     <section id="apresentacao" className="relative h-screen w-screen">
       <SwiperComponent />
-      <div className="absolute inset-0 flex flex-col gap-5 pt-24 md:pt-40 justify-left container mx-auto z-10">
+      <div className="absolute inset-0 flex flex-col gap-5 pt-20 md:pt-40 justify-left container mx-auto z-10">
         <div className="flex relative flex-col items-left text-white gap-3">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}
