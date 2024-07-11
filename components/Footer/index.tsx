@@ -60,6 +60,11 @@ const Footer: React.FC = () => {
           <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
           <BackToTopButton />
         </div>
+        <div className="font-thin italic text-sm mt-5">
+          <p>
+            Desenvolvido por @<code>_bracetmarcelo</code>
+          </p>
+        </div>
       </div>
     </footer>
   );
