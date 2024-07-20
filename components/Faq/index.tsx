@@ -25,7 +25,7 @@ const Faq: React.FC = () => {
       id="faq"
       className="container my-20 px-4 md:px-0"
     >
-      <h2 className="text-3xl font-bold text-terciary text-center mb-10">
+      <h2 className="text-3xl ml-5 font-bold text-terciary text-left md:text-center mb-10">
         Perguntas Frequentes
       </h2>
       <div className="grid gap-6 md:grid-cols-2">
