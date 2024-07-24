@@ -72,6 +72,22 @@ export const Header: React.FC = () => {
         </Link>
       </div>
       {/* Show NAV in Desktop */}
+
+      {
+        /* show Instagram button the bottom if isOpen */
+        isOpen && (
+          <div className="hidden md:block">
+            <Link
+              href="https://www.instagram.com/isaconsultoria/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </Link>
+          </div>
+        )
+      }
+
       <div>
         <nav className="hidden lg:flex">
           <ul className="flex gap-5">

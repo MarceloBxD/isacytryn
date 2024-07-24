@@ -84,8 +84,8 @@ const Presentation: React.FC = () => {
           src="/images/bg.jpg"
         />
       </div>
-      <div className=" ml-12 mt-5 max-w-[80%] md:w-full bottom-18 md:bottom-36 md:left-[27%]">
-        <div className="flex relative flex-col items-left text-quaternary gap-1 md:gap-3">
+      <div className="md:pl-12 mt-5 max-w-[80%] md:w-full ">
+        <div className="flex relative flex-col items-left text-quaternary gap-2 md:gap-4">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}
             className="text-lg text-center md:text-left md:text-3xl"
