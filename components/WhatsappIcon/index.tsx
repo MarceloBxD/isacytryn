@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 type WhatsappIconProps = {
-  mode: "light" | "default";
+  mode?: "light" | "default";
 };
 
 export const WhatsappIcon = ({ mode = "default" }: WhatsappIconProps) => {
