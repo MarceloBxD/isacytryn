@@ -68,7 +68,7 @@ const Presentation: React.FC = () => {
   return (
     <section
       id="apresentacao"
-      className="relative h-screen w-screen -mb-10 md:mb-12"
+      className="relative flex flex-col md:flex-row  items-center h-screen max-w-screen -mb-10 md:mb-12"
     >
       <div className="relative w-screen h-[280px] md:w-[400px] md:h-full">
         <Image
@@ -84,7 +84,7 @@ const Presentation: React.FC = () => {
           src="/images/bg.jpg"
         />
       </div>
-      <div className="absolute ml-12 mt-5 max-w-[80%] md:w-full bottom-18 md:bottom-36 md:left-[27%]">
+      <div className=" ml-12 mt-5 max-w-[80%] md:w-full bottom-18 md:bottom-36 md:left-[27%]">
         <div className="flex relative flex-col items-left text-quaternary gap-1 md:gap-3">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}

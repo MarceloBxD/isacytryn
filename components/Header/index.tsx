@@ -95,10 +95,6 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
       </div>
-      {/* Show NAV in Desktop */}
-      <div className="hidden md:block">
-        <CtaButton title={"<strong>Agende</strong> sua consulta agora!"} />
-      </div>
       {/* Show Hamburguer menu in Mobile */}
       <div className="block md:hidden">
         <HamburgerMenu />

@@ -9,6 +9,7 @@ import About from "@/sections/About";
 import Footer from "../../components/Footer";
 import Feedbacks from "@/sections/Feedbacks";
 import BackToTopButton from "../../components/BackToTopButton";
+import { WhatsappIcon } from "../../components/WhatsappIcon";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       {/* <Feedbacks /> */}
       <Faq />
       <Footer />
+      <WhatsappIcon />
     </main>
   );
 }
