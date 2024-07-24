@@ -92,7 +92,12 @@ const About: React.FC = () => {
               key={index}
               className="text-lg lg:text-md h-fit flex items-center mb-2 p-1 gap-2"
             >
-              <FaCheck size={15} color="#DE9790" />
+              <FaCheck
+                className="min-w-5"
+                width={10}
+                height={10}
+                color="#DE9790"
+              />
               <span className="ml-2 text-sm md:text-lg">{aboutItem}</span>
             </li>
           ))}
