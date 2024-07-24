@@ -73,20 +73,11 @@ export const Header: React.FC = () => {
       </div>
       {/* Show NAV in Desktop */}
 
-      {
-        /* show Instagram button the bottom if isOpen */
-        isOpen && (
-          <div className="hidden md:block">
-            <Link
-              href="https://www.instagram.com/isaconsultoria/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </Link>
-          </div>
-        )
-      }
+      {isOpen && (
+        <div className="fixed md:hidden bottom-2 p-2 w-full max-w-[80vw] min-w-[300px] z-[999999]">
+          <CtaButton title="Entre em contato pelo Instagram" insta />
+        </div>
+      )}
 
       <div>
         <nav className="hidden lg:flex">

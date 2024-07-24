@@ -1,13 +1,14 @@
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import gsap from "gsap";
 
 type CtaButtonProps = {
   title: string;
+  insta?: boolean;
 };
 
-export const CtaButton: React.FC<CtaButtonProps> = ({ title }) => {
+export const CtaButton: React.FC<CtaButtonProps> = ({ title, insta }) => {
   const buttonRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -64,12 +65,16 @@ export const CtaButton: React.FC<CtaButtonProps> = ({ title }) => {
     });
   }, []);
 
+  const INSTAGRAM_URL = "https://www.instagram.com/psi.isabelacytryn/";
+  const WHATSAPP_URL =
+    "https://api.whatsapp.com/send?phone=5521994633606&text=Oi,%20vim%20pelo%20site!%20";
+
   return (
     <Link
       ref={buttonRef}
       target="_blank"
-      href="https://api.whatsapp.com/send?phone=5521994633606&text=Oi,%20vim%20pelo%20site!%20"
-      className="flex border cursor-pointer py-2 px-4 rounded-full z-50 items-center gap-3"
+      href={insta ? INSTAGRAM_URL : WHATSAPP_URL}
+      className="flex border cursor-pointer py-2 px-4 rounded-full z-50  justify-between items-center gap-3"
     >
       {/* svg wpp */}
       <span
@@ -78,7 +83,11 @@ export const CtaButton: React.FC<CtaButtonProps> = ({ title }) => {
         }}
         className="text-quaternary text-md"
       />
-      <FaWhatsapp size={24} color="#25D366" />
+      {insta ? (
+        <FaInstagram size={24} color="#E1306C" />
+      ) : (
+        <FaWhatsapp size={24} color="#25D366" />
+      )}
     </Link>
   );
 };
