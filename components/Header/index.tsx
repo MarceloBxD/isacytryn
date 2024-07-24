@@ -19,6 +19,8 @@ export const Header: React.FC = () => {
   const { isOpen, setIsOpen } = useApp();
   const [scrolled, setScrolled] = useState(false);
 
+  const [isOnTop, setIsOnTop] = useState(true);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= window.innerHeight) {
@@ -48,7 +50,8 @@ export const Header: React.FC = () => {
       className={`${
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
       } w-full z-50 top-0 bg-secondary rounded-lg flex ${
-        isOpen ? "items-start" : "items-center"
+        isOpen ? `items-start` : `items-center `
+      }
       } justify-between px-10 py-6 md:py-2`}
     >
       <div className="relative h-10 md:h-14 w-48 md:w-64">

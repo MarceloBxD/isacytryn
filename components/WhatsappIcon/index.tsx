@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-// import { Container } from './styles';
-import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
@@ -10,9 +8,29 @@ type WhatsappIconProps = {
 };
 
 export const WhatsappIcon = ({ mode = "default" }: WhatsappIconProps) => {
+  const [scrollIsTop, setScrollIsTop] = React.useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrollIsTop(false);
+      } else {
+        setScrollIsTop(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
-      className={`fixed bottom-4 right-4 hover:cursor-pointer flex items-center justify-center p-1.5 rounded-full bg-[${
+      className={`${
+        scrollIsTop ? "hidden" : "fixed"
+      } bottom-4 right-4 hover:cursor-pointer flex items-center justify-center p-1.5 rounded-full bg-[${
         mode === "light" ? "#FFF" : "#25D366"
       }] `}
     >

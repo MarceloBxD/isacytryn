@@ -27,7 +27,7 @@ const Approach: React.FC = () => {
         </p>
       </motion.div>
       <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
-        <ul className="flex flex-col gap-3 bg-quaternary p-3 rounded-xl border-4 border-terciary">
+        <ul className="flex flex-col gap-3 bg-quaternary p-3 md:p-5 rounded-xl border-4 border-terciary">
           {APPROACH_DATA.items.map((item, index) => (
             <motion.div
               initial={{ opacity: 0 }}
