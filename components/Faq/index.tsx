@@ -12,6 +12,7 @@ import {
 import { FAQ_DATA } from "@/data";
 import { motion } from "framer-motion";
 import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+import { Title } from "../Title";
 
 const Faq: React.FC = () => {
   // Dividindo FAQ_DATA em duas colunas
@@ -25,9 +26,7 @@ const Faq: React.FC = () => {
       id="faq"
       className="container my-20 px-4 md:px-0"
     >
-      <h2 className="text-3xl ml-5 font-bold text-terciary text-left mb-10">
-        Perguntas Frequentes
-      </h2>
+      <Title className="ml-6" text="PERGUNTAS FREQUENTES" />
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <Accordion type="multiple">

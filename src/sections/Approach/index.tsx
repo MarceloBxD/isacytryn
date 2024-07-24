@@ -12,14 +12,13 @@ import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 
 // data
 import { APPROACH_DATA } from "@/data";
+import { Title } from "../../../components/Title";
 
 const Approach: React.FC = () => {
   return (
     <motion.section className="container my-20 flex gap-10 flex-col md:flex-row">
       <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
-        <motion.h2 className="text-xl md:text-3xl mb-8 md:mb-2 font-bold text-terciary">
-          {APPROACH_DATA.title}
-        </motion.h2>
+        <Title text={APPROACH_DATA.title} />
         <h3 className="text-lg md:text-xl text-quaternary">
           {APPROACH_DATA.subtitle}
         </h3>

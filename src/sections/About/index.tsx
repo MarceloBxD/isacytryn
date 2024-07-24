@@ -12,6 +12,7 @@ import { ABOUT_DATA } from "@/data";
 // image
 import Image from "next/image";
 import { CtaButton } from "../../../components/CtaButton";
+import { Title } from "../../../components/Title";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,9 +78,7 @@ const About: React.FC = () => {
 
   return (
     <section id="sobre-mim" className="relative container">
-      <h2 className="text-3xl w-fit font-bold text-terciary mb-6 md:mb-12">
-        Sobre
-      </h2>
+      <Title text="SOBRE MIM" />
       <div className="relative">
         <div className="text-quaternary relative w-fit text-xl md:text-2xl lg:text-3xl font-bold mt-8 mb-6 md:mb-12">
           Isabela Cytryn

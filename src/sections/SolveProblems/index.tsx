@@ -15,6 +15,7 @@ import { MessageCircleIcon } from "lucide-react";
 // components
 import SolveProblemCard from "../../../components/SolveProblemCard";
 import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+import { Title } from "../../../components/Title";
 
 const SOLVE_PROBLEMS_DATA = {
   title: "ANSIEDADE, DEPRESSÃO, ESTRESSE, ANGÚSTIA...",
@@ -106,12 +107,11 @@ const SolveProblems: React.FC = () => {
         text-quaternary
         `}
       >
-        <motion.h2
-          {...FADE_IN_BASIC_ANIMATION}
-          className="text-lg md:text-xl tracking-wider lg:text-2xl text-terciary font-bold text-center"
-        >
-          {SOLVE_PROBLEMS_DATA.title}
-        </motion.h2>
+        <Title
+          className="
+        text-center"
+          text={SOLVE_PROBLEMS_DATA.title}
+        />
         <motion.p
           {...FADE_IN_BASIC_ANIMATION}
           className="text-xl mb-10 md:text-2xl lg:text-4xl text-center"
