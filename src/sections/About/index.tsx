@@ -106,7 +106,7 @@ const About: React.FC = () => {
             Além do meu profissionalismo, você pode esperar uma relação genuína,
             marcada por confiança, empatia, transparência e autenticidade.{" "}
           </p>
-          <p className="text-quaternary">
+          <p className="text-quaternary mt-3">
             Meu objetivo é que você tenha uma vida da qual se orgulhe!
           </p>
         </ul>
