@@ -29,7 +29,7 @@ const MetaTags = () => {
       <meta property="og:url" content="https://isacytryn.vercel.app/" />
       <meta
         property="og:image"
-        content="https://isacytryn.vercel.app/og/sharing_img.jpg"
+        content="https://isacytryn.vercel.app/og/og_image.jpg"
       />
       <meta property="og:site_name" content="Psicóloga - Isabela Cytryn" />
       <meta property="og:locale" content="pt_BR" />
@@ -40,7 +40,7 @@ const MetaTags = () => {
       <meta name="twitter:description" content="" />
       <meta
         name="twitter:image"
-        content="https://isacytryn.vercel.app/og/sharing_img.jpg"
+        content="https://isacytryn.vercel.app/og/og_image.jpg"
       />
 
       {/* AUTHOR SEO */}

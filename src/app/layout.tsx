@@ -10,8 +10,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const metadata: Metadata = {
-  title: "Psicóloga - Isa Cytryn",
-  description: "Isa Cytryn - Psicóloga",
+  title: {
+    default: "Psicóloga | Isabela Cytryn",
+    template: `%s | Cytryn`,
+  },
+  description: "Psicóloga formada em Terapia cognitivo-comportamental",
 };
 
 const sora = Sora({
