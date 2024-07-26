@@ -31,7 +31,7 @@ export const FeedbackCard = ({
   role,
 }: FeedbackCardProps) => {
   return (
-    <div className="bg-white rounded min-h-[270px] md:min-h-[370px] border justify-around border-terciary py-4 px-4 flex flex-col gap-2">
+    <div className="bg-white rounded min-h-[270px] md:min-h-[300px] border border-terciary py-4 px-4 flex flex-col gap-2">
       <div className="flex gap-2 items-center">
         {Array.from({ length: quantOfstars }, (_, index) => (
           <div key={index}>
@@ -39,7 +39,9 @@ export const FeedbackCard = ({
           </div>
         ))}
       </div>
-      <div className=" text-gray-400 text-sm md:text-md">{description}</div>
+      <div className=" text-gray-400 text-sm md:text-md pt-5">
+        {description}
+      </div>
       <div>
         <h3 className="text-lg md:text-xl font-bold">{author}</h3>
         <p className="text-sm md:text-md text-gray-400">{role}</p>
