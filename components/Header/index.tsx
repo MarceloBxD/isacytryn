@@ -49,15 +49,16 @@ export const Header: React.FC = () => {
     <header
       className={`${
         isOpen ? "h-[100dvh] bg-white bg-opacity-100" : ""
-      } w-full z-50 top-0 bg-secondary rounded-lg flex ${
+      } w-full z-50 top-0 bg-secondary border-white border-b-2 rounded-lg flex ${
         isOpen ? `items-start` : `items-center `
       }
-      } justify-between px-10 py-6 md:py-2`}
+      } justify-between px-10 py-6 md:py-4`}
     >
       <div className="relative h-10 md:h-12 w-48 md:w-64">
         <Link href="/">
           <Image
             quality={100}
+            priority
             src={
               scrolled
                 ? "/isa_logo_horizontal.png"
@@ -66,7 +67,7 @@ export const Header: React.FC = () => {
                 : "/isa_logo_horizontal_branco.png"
             }
             layout="fill"
-            className="object-cover bg-center bg-cover"
+            className="object-contain"
             alt="Logo Cytryn"
           />
         </Link>
@@ -84,7 +85,7 @@ export const Header: React.FC = () => {
           <ul className="flex gap-5">
             {NAV_DATA.map((navItem) => (
               <li
-                className={`relative uppercase font-semibold after:content-[''] after:absolute after:left-full after:mx-5 after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-[''] ${
+                className={`relative uppercase font-thin after:content-[''] after:absolute after:left-full after:mx-5 after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-[''] ${
                   scrolled
                     ? "text-secondary after:text-secondary"
                     : "text-white after:text-white"
@@ -93,7 +94,7 @@ export const Header: React.FC = () => {
               >
                 <Link href={navItem.href}>
                   <span
-                    className={`relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100`}
+                    className={`relative block  after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100`}
                   >
                     {navItem.name}
                   </span>

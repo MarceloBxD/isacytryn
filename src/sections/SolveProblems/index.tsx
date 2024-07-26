@@ -83,7 +83,8 @@ const SOLVE_PROBLEMS_DATA = {
 
 const SolveProblems: React.FC = () => {
   return (
-    <section
+    <motion.section
+      {...FADE_IN_BASIC_ANIMATION}
       id="solucao-de-problemas"
       className={`
     grid
@@ -111,10 +112,7 @@ const SolveProblems: React.FC = () => {
         text-center"
           text={SOLVE_PROBLEMS_DATA.title}
         />
-        <motion.p
-          {...FADE_IN_BASIC_ANIMATION}
-          className="text-xl mb-10 md:text-2xl lg:text-4xl text-center"
-        >
+        <motion.p className="text-xl mb-10 md:text-2xl lg:text-4xl text-center">
           {SOLVE_PROBLEMS_DATA.description}
         </motion.p>
       </motion.div>
@@ -123,7 +121,7 @@ const SolveProblems: React.FC = () => {
           {problem.description}
         </SolveProblemCard>
       ))}
-    </section>
+    </motion.section>
   );
 };
 

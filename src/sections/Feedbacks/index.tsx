@@ -7,15 +7,20 @@ import { Title } from "../../../components/Title";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
+import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 
 const Feedbacks: React.FC = () => {
   return (
-    <div className="max-w-screen w-full mt-10 md:p-16">
-      <Title className="ml-6" text="Feedbacks" />
-      <h3 className="text-lg ml-6 md:text-xl text-quaternary">
+    <motion.section
+      {...FADE_IN_BASIC_ANIMATION}
+      className="max-w-screen container w-full mt-10"
+    >
+      <Title className="" text="Feedbacks" />
+      <h3 className="text-lg md:text-xl text-quaternary">
         Aqui estão alguns dos <b>feedbacks</b> dos meus clientes
       </h3>
-      <div className="px-6">
+      <div>
         <Swiper
           modules={[Pagination, A11y, Autoplay]}
           spaceBetween={50}
@@ -77,7 +82,7 @@ const Feedbacks: React.FC = () => {
           />
         </svg>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

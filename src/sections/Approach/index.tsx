@@ -16,8 +16,11 @@ import { Title } from "../../../components/Title";
 
 const Approach: React.FC = () => {
   return (
-    <motion.section className="container my-20 flex gap-10 flex-col md:flex-row">
-      <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
+    <motion.section
+      {...FADE_IN_BASIC_ANIMATION}
+      className="container my-20 flex gap-10 flex-col md:flex-row"
+    >
+      <motion.div className="flex-1">
         <Title text={APPROACH_DATA.title} />
         <h3 className="text-lg md:text-xl text-quaternary">
           {APPROACH_DATA.subtitle}
@@ -26,7 +29,7 @@ const Approach: React.FC = () => {
           {APPROACH_DATA.description}
         </p>
       </motion.div>
-      <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
+      <motion.div className="flex-1">
         <ul className="flex flex-col gap-3 bg-quaternary p-3 md:p-5 rounded-xl border-4 border-terciary">
           {APPROACH_DATA.items.map((item, index) => (
             <>
