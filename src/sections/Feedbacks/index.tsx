@@ -13,6 +13,7 @@ import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
 const Feedbacks: React.FC = () => {
   return (
     <motion.section
+      id="feedbacks"
       {...FADE_IN_BASIC_ANIMATION}
       className="max-w-screen container w-full mt-10"
     >
