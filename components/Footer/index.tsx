@@ -23,7 +23,7 @@ const SOCIAL_MEDIA_ITEMS = [
       <Image
         quality={100}
         alt="Doctoralia logo"
-        src="/doctoralia.png"
+        src="/icons/doctoralia.png"
         width={32}
         height={32}
       />
