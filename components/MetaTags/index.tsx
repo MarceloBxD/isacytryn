@@ -13,7 +13,8 @@ const MetaTags = () => {
       />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Isa Cytryn" />
-      <link rel="shortcut icon" href="/src/app/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <meta name="description" content="" />
       <meta
