@@ -3,7 +3,6 @@
 @import "tailwindcss/utilities";
 
 @import "swiper/css";
-@import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
 * {
@@ -16,9 +15,6 @@ body {
   background-color: #f0e9e0;
   overflow-x: hidden;
 }
-
-/* styles/globals.css */
-/* styles/globals.css */
 
 .relative {
   position: relative;
@@ -72,48 +68,59 @@ body {
   opacity: 1;
 }
 
-/* Estilos personalizados para os bullets de paginação */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* Cor dos botões de navegação */
+  background: rgba(255, 255, 255, 0.8); /* Fundo dos botões de navegação */
+  border-radius: 50%; /* Botões arredondados */
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 1); /* Fundo ao passar o mouse */
+}
+
+/* Estilizando a paginação */
 .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ae8f72; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
-  border-radius: 50%; /* Forma circular */
-  margin: 0 5px; /* Espaçamento entre bullets */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: transform 0.3s; /* Animação de transição */
-  z-index: 99999;
-}
-
-.swiper-pagination-bullet:hover {
-  transform: scale(1.2); /* Aumentar tamanho ao passar o mouse */
-  background-color: #fff; /* Cor de fundo ao passar o mouse */
-}
-
-.custom-swiper .swiper-pagination {
-  bottom: 20px; /* Ajuste a distância do fundo */
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: auto;
+  background: #de9790; /* Cor dos bullets da paginação */
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #fff !important; /* Cor de fundo do bullet ativo */
+  background: #de9790; /* Cor dos bullets ativos */
+  opacity: 1;
+  scale: 2;
 }
 
-/* Ajuste a cor da navegação do Swiper, se necessário */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #264653; /* Cor das setas de navegação */
+/* Personalizando o contêiner do Swiper */
+.swiper-container {
+  padding: 20px;
+  background-color: #f0f0f0; /* Fundo do contêiner */
+  border-radius: 20px; /* Borda arredondada */
 }
 
-.swiper-pagination {
-  pointer-events: auto;
-  z-index: 99999;
+/* Estilizando os slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando os textos dentro dos slides */
+.swiper-slide .slide-text {
+  font-size: 1.2rem;
+  color: #333;
 }

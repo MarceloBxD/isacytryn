@@ -2,8 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FEEDBACKS } from "@/data/feedbacks-data";
 import { FeedbackCard } from "../../../components/FeedbackCard";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Title } from "../../../components/Title";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Feedbacks: React.FC = () => {
   return (
@@ -14,8 +17,13 @@ const Feedbacks: React.FC = () => {
       </h3>
       <div className="px-6">
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Pagination, A11y, Autoplay]}
           spaceBetween={50}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -27,12 +35,12 @@ const Feedbacks: React.FC = () => {
               slidesPerView: 3,
             },
           }}
-          className="mt-5"
+          className="mt-5 px-5"
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log("swiper", swiper)}
         >
           {FEEDBACKS.map((feedback, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className="flex justify-center" key={index}>
               <FeedbackCard key={feedback.description} {...feedback} />
             </SwiperSlide>
           ))}
