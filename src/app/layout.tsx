@@ -5,7 +5,9 @@ import { AppProvider } from "@/contexts/AppContext";
 import MetaTags from "../../components/MetaTags";
 import SmoothScrolling from "../../components/SmoothScrolling";
 
-const inter = Inter({ subsets: ["latin"] });
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export const metadata: Metadata = {
   title: "Psicóloga - Isa Cytryn",
