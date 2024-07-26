@@ -39,7 +39,7 @@ const MetaTags = () => {
       <meta name="twitter:description" content="" />
       <meta
         name="twitter:image"
-        content="https://viert.com/assets/brand/logo.png"
+        content="https://isacytryn.vercel.app/sharing_img.png"
       />
 
       {/* AUTHOR SEO */}

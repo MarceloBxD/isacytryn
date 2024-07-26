@@ -24,8 +24,6 @@ const raleway = Raleway({
   weight: ["400", "700"], // Adicione os pesos desejados
 });
 
-export const HEAD = <MetaTags />;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <AppProvider>
-        {HEAD}
+        <MetaTags />
         <body className={raleway.className}>
           <SmoothScrolling>{children}</SmoothScrolling>
         </body>
