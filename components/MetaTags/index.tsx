@@ -1,10 +1,11 @@
-import Head from "next/head";
-
 const MetaTags = () => {
   return (
-    <Head>
+    <head>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+      />
       <meta name="theme-color" content="#AE8F72" />
       <meta
         name="apple-mobile-web-app-status-bar-style"
@@ -28,7 +29,7 @@ const MetaTags = () => {
       <meta property="og:url" content="https://isacytryn.vercel.app/" />
       <meta
         property="og:image"
-        content="https://isacytryn.vercel.app/sharing_img.png"
+        content="https://isacytryn.vercel.app/og/sharing_img.png"
       />
       <meta property="og:site_name" content="Psicóloga - Isabela Cytryn" />
       <meta property="og:locale" content="pt_BR" />
@@ -39,14 +40,17 @@ const MetaTags = () => {
       <meta name="twitter:description" content="" />
       <meta
         name="twitter:image"
-        content="https://isacytryn.vercel.app/sharing_img.png"
+        content="https://isacytryn.vercel.app/og/sharing_img.png"
       />
 
       {/* AUTHOR SEO */}
       <meta name="author" content="Marcelo Bracet" />
       <link rel="author" href="https://bracetdev.vercel.app/" />
+      <meta name="author" content="@_bracetmarcelo" />
+      <meta name="author" content="@majors_solutions" />
+
       <meta name="application-name" content="Isabela Cytryn" />
-    </Head>
+    </head>
   );
 };
 

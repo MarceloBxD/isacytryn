@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Sora, Raleway } from "next/font/google";
+import { Sora, Raleway } from "next/font/google";
 import { AppProvider } from "@/contexts/AppContext";
 import MetaTags from "../../components/MetaTags";
 import SmoothScrolling from "../../components/SmoothScrolling";
