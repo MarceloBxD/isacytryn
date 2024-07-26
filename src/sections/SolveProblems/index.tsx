@@ -22,7 +22,7 @@ const SOLVE_PROBLEMS_DATA = {
   description: "Se essa é a sua realidade hoje, é provável que você:",
   items: [
     {
-      faceIcon: <TfiFaceSad size={24} color="#000" />,
+      faceIcon: <TfiFaceSad size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Lide com <b>preocupações</b> persistentes que dificultam viver no
@@ -31,7 +31,7 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <IoCloud size={24} color="#000" />,
+      faceIcon: <IoCloud size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Esteja com <b>dificuldade para se concentrar</b>, pensar com clareza e
@@ -40,7 +40,7 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <Pause size={24} color="#000" />,
+      faceIcon: <Pause size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Esteja sendo <b>prejudicado</b> em mais de uma área da sua vida, como
@@ -50,7 +50,7 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <Heart size={24} color="#000" />,
+      faceIcon: <Heart size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Esteja sentindo{" "}
@@ -60,7 +60,7 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <FaHamburger size={24} color="#000" />,
+      faceIcon: <FaHamburger size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Tenha criado maus hábitos - como a{" "}
@@ -70,7 +70,7 @@ const SOLVE_PROBLEMS_DATA = {
       ),
     },
     {
-      faceIcon: <MessageCircleIcon size={24} color="#000" />,
+      faceIcon: <MessageCircleIcon size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
           Tenha pensamentos muito <b>autocríticos</b>, como: &quot;não ser bom o
@@ -90,7 +90,8 @@ const SolveProblems: React.FC = () => {
     grid-cols-1
     md:grid-cols-2
     lg:grid-cols-3
-    gap-5
+    gap-3
+    md:gap-4
     container
 `}
     >
@@ -99,11 +100,9 @@ const SolveProblems: React.FC = () => {
         col-span-full
         flex
         flex-col
-        gap-5
         items-center
         justify-center
         text-center
-        px-5
         text-quaternary
         `}
       >

@@ -4,11 +4,16 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import gsap from "gsap";
 
 type CtaButtonProps = {
-  title: string;
+  title?: string;
   insta?: boolean;
+  rounded?: boolean;
 };
 
-export const CtaButton: React.FC<CtaButtonProps> = ({ title, insta }) => {
+export const CtaButton: React.FC<CtaButtonProps> = ({
+  title,
+  insta,
+  rounded,
+}) => {
   const buttonRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -74,15 +79,18 @@ export const CtaButton: React.FC<CtaButtonProps> = ({ title, insta }) => {
       ref={buttonRef}
       target="_blank"
       href={insta ? INSTAGRAM_URL : WHATSAPP_URL}
-      className="flex border cursor-pointer py-2 px-4 rounded-full z-50  justify-between items-center gap-3"
+      className={`flex border cursor-pointer py-2 px-4 rounded-full z-50 justify-between items-center gap-3`}
     >
       {/* svg wpp */}
-      <span
-        dangerouslySetInnerHTML={{
-          __html: title,
-        }}
-        className="text-quaternary text-md"
-      />
+      {!rounded && (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: title ?? "",
+          }}
+          className="text-quaternary text-md"
+        />
+      )}
+
       {insta ? (
         <FaInstagram size={24} color="#E1306C" />
       ) : (

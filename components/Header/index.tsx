@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
       }
       } justify-between px-10 py-6 md:py-2`}
     >
-      <div className="relative h-10 md:h-14 w-48 md:w-64">
+      <div className="relative h-10 md:h-12 w-48 md:w-64">
         <Link href="/">
           <Image
             quality={100}
@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
       {/* Show NAV in Desktop */}
 
       {isOpen && (
-        <div className="fixed md:hidden bottom-2 p-2 w-full max-w-[80vw] min-w-[300px] z-[999999]">
+        <div className="fixed md:hidden bottom-2 p-2 w-full flex flex-col max-w-[80vw] min-w-[300px] z-[999999]">
           <CtaButton title="Entre em contato pelo Instagram" insta />
         </div>
       )}
@@ -84,7 +84,7 @@ export const Header: React.FC = () => {
           <ul className="flex gap-5">
             {NAV_DATA.map((navItem) => (
               <li
-                className={`relative after:content-[''] after:absolute after:left-full after:mx-5 after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-[''] ${
+                className={`relative uppercase font-semibold after:content-[''] after:absolute after:left-full after:mx-5 after:font-bold after:text-lg after:font-montserrat after:leading-10 after:uppercase last:after:content-[''] ${
                   scrolled
                     ? "text-secondary after:text-secondary"
                     : "text-white after:text-white"
@@ -93,9 +93,7 @@ export const Header: React.FC = () => {
               >
                 <Link href={navItem.href}>
                   <span
-                    className={`relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[${
-                      scrolled ? "#FFFFFF" : "#DE9790"
-                    }] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100`}
+                    className={`relative block pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100`}
                   >
                     {navItem.name}
                   </span>
@@ -128,6 +126,11 @@ export const Header: React.FC = () => {
         ))}
       </div>
       {/* Show NAV in Mobile */}
+
+      <div className="hidden md:flex gap-4">
+        <CtaButton rounded insta />
+        <CtaButton rounded />
+      </div>
     </header>
   );
 };

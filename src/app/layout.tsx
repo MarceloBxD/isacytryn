@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Sora, Raleway } from "next/font/google";
 import { AppProvider } from "@/contexts/AppContext";
 import MetaTags from "../../components/MetaTags";
+import SmoothScrolling from "../../components/SmoothScrolling";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +29,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="pt-br">
       <AppProvider>
         {HEAD}
-        <body className={raleway.className}>{children}</body>
+        <body className={raleway.className}>
+          <SmoothScrolling>{children}</SmoothScrolling>
+        </body>
       </AppProvider>
     </html>
   );
