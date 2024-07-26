@@ -19,17 +19,21 @@ const MetaTags = () => {
         name="keywords"
         content="Psicóloga Isabela Cytryn, Atendimento psicológico, Terapia online, Psicoterapia individual, Tratamento para ansiedade, Tratamento para depressão, Terapia cognitivo-comportamental, Consultas psicológicas, Psicoterapia para adultos, Terapia para estresse, Psicóloga especializada em transtornos de humor, Apoio emocional, Psicóloga em [cidade/região específica], Psicoterapia para autoconhecimento, Psicóloga de confiança, Consulta psicológica online, Terapia para autoestima, Suporte psicológico, Psicoterapia presencial e online, Atendimento psicológico humanizado"
       />
+
+      {/* OPEN GRAPH */}
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content="Isa Cytryn" />
       <meta property="og:description" content="" />
       <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://isacytryn.vercel.app/" />
       <meta
-        property="og:url"
-        content="http://www.psicologaisabelacytryn.com.br"
+        property="og:image"
+        content="https://isacytryn.vercel.app/sharing_img.png"
       />
-      <meta property="og:image" content="/images/bg.jpg" />
-      <meta property="og:site_name" content="Isabela Cytryn" />
+      <meta property="og:site_name" content="Psicóloga - Isabela Cytryn" />
       <meta property="og:locale" content="pt_BR" />
+
+      {/* Twitter SEO */}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="Isabela Cytryn" />
       <meta name="twitter:description" content="" />
@@ -37,6 +41,8 @@ const MetaTags = () => {
         name="twitter:image"
         content="https://viert.com/assets/brand/logo.png"
       />
+
+      {/* AUTHOR SEO */}
       <meta name="author" content="Marcelo Bracet" />
       <link rel="author" href="https://bracetdev.vercel.app/" />
       <meta name="application-name" content="Isabela Cytryn" />

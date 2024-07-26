@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { FADE_IN_BASIC_ANIMATION } from "@/utils/animations";
+import Link from "next/link";
 
 const Feedbacks: React.FC = () => {
   return (
@@ -53,12 +54,12 @@ const Feedbacks: React.FC = () => {
         </Swiper>
       </div>
       <div className="flex gap-3 group mx-auto w-fit mt-5 items-center justify-end">
-        <a
+        <Link
           href="https://www.doctoralia.com.br/isabela-cytryn-2"
           className="hover:underline hover:cursor-pointer"
         >
           Ver mais feedbacks
-        </a>
+        </Link>
         <svg
           className="group-hover:translate-x-1 transition-transform duration-150"
           width="20"
@@ -70,16 +71,16 @@ const Feedbacks: React.FC = () => {
           <path
             d="M2 12L20 12"
             stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M13 5L20 12L13 19"
             stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
