@@ -8,7 +8,7 @@ import SmoothScrolling from "../../components/SmoothScrolling";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Isa Cytryn",
+  title: "Psicóloga - Isa Cytryn",
   description: "Isa Cytryn - Psicóloga",
 };
 
@@ -29,8 +29,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-
   return (
     <html lang="pt-br">
       <AppProvider>

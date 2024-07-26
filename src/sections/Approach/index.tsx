@@ -29,16 +29,19 @@ const Approach: React.FC = () => {
       <motion.div {...FADE_IN_BASIC_ANIMATION} className="flex-1">
         <ul className="flex flex-col gap-3 bg-quaternary p-3 md:p-5 rounded-xl border-4 border-terciary">
           {APPROACH_DATA.items.map((item, index) => (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="flex items-center gap-2"
-              key={index}
-            >
-              <FaCheck size={42} color="#DE9790" />
-              <li className="ml-3 text-white">{item}</li>
-            </motion.div>
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="flex items-center gap-2"
+                key={index}
+              >
+                <FaCheck size={42} color="#DE9790" />
+                <li className="ml-3 text-white">{item}</li>
+              </motion.div>
+              <div className="hidden md:block w-full h-[0.5px] bg-white rounded-full last:hidden" />
+            </>
           ))}
         </ul>
       </motion.div>
