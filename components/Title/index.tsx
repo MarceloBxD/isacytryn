@@ -9,7 +9,7 @@ type TitleProps = {
 export const Title = ({ text, className }: TitleProps) => {
   return (
     <motion.h2
-      className={`text-xl text-terciary md:text-3xl mb-8 md:mb-2 text-left font-bold  ${className} `}
+      className={`text-xl text-secondary md:text-3xl mb-8 md:mb-2 text-left font-bold  ${className} `}
     >
       {text}
     </motion.h2>

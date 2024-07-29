@@ -115,7 +115,7 @@ const Presentation: React.FC = () => {
           {...FADE_IN_BASIC_ANIMATION}
           className="flex text-left mx-auto md:mx-0 w-fit justify-center md:justify-left"
         >
-          <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
+          <CtaButton title="Entre em contato pelo <b>WhatsApp</b>!" />
         </motion.div>
       </div>
       <div></div>

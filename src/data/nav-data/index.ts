@@ -1,8 +1,9 @@
 const NAV_DATA = [
-  { name: "Apresentação", href: "/#apresentacao" },
-  { name: "Contato", href: "/#minha-abordagem" },
+  { name: "Início", href: "/#apresentacao" },
+  { name: "Sintomas", href: "/#sintomas" },
+  { name: "Abordagem", href: "/#abordagem" },
   { name: "Sobre Mim", href: "/#sobre-mim" },
-  { name: "Feedbacks", href: "/#feedbacks" },
+  { name: "Avaliações", href: "/#avaliações" },
   { name: "FAQ", href: "/#faq" },
 ];
 

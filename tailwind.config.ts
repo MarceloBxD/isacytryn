@@ -33,7 +33,7 @@ const config = {
         primary: "#F0e9e0",
         secondary: "#AE8F72",
         terciary: "#DE9790",
-        quaternary: "#2d5262",
+        quaternary: "#8EA8C3",
         "glass-primary": "rgba(240, 233, 224, 0.3)",
         "glass-border": "rgba(255, 255, 255, 0.05)",
         border: "hsl(var(--border))",

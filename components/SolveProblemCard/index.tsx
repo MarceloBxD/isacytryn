@@ -17,14 +17,14 @@ const SolveProblemCard: React.FC<SolveProblemCardProps> = ({
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       whileHover={{ scale: 1.05 }}
-      className={`flex gap-4 p-2 bg-quaternary border-terciary border-4 shadow-md rounded-lg items-center hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-default`}
+      className={`flex gap-4 p-2 bg-transparent border-secondary border-4 shadow-md rounded-lg items-center hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-default`}
     >
       <div
-        className={`flex items-center justify-center  bg-terciary rounded-full p-2`}
+        className={`flex items-center justify-center  bg-secondary rounded-full p-2`}
       >
         {faceIcon}
       </div>
-      <div className={`text-white text-left font-semibold text-lg`}>
+      <div className={`text-quaternary text-left font-semibold text-lg`}>
         {children}
       </div>
     </motion.div>

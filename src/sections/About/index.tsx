@@ -96,9 +96,11 @@ const About: React.FC = () => {
                 className="min-w-5"
                 width={10}
                 height={10}
-                color="#DE9790"
+                color="#AE8F72"
               />
-              <span className="ml-2 text-sm md:text-lg">{aboutItem}</span>
+              <span className="ml-2 text-quaternary text-sm md:text-lg">
+                {aboutItem}
+              </span>
             </li>
           ))}
           <div className="h-1 bg-quaternary my-3 w-full " />

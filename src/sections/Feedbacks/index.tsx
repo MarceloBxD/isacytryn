@@ -14,14 +14,12 @@ import Link from "next/link";
 const Feedbacks: React.FC = () => {
   return (
     <motion.section
-      id="feedbacks"
+      id="avaliações"
       {...FADE_IN_BASIC_ANIMATION}
       className="max-w-screen container w-full mt-10"
     >
-      <Title className="" text="Feedbacks" />
-      <h3 className="text-lg md:text-xl text-quaternary">
-        Aqui estão alguns dos <b>feedbacks</b> dos meus clientes
-      </h3>
+      <Title className="" text="Avaliações" />
+
       <div>
         <Swiper
           modules={[Pagination, A11y, Autoplay]}
@@ -55,10 +53,11 @@ const Feedbacks: React.FC = () => {
       </div>
       <div className="flex gap-3 group mx-auto w-fit mt-5 items-center justify-end">
         <Link
-          href="https://www.doctoralia.com.br/isabela-cytryn-2"
+          target="_blank"
+          href="https://www.doctoralia.com.br/isabela-cytryn-2/psicologo/rio-de-janeiro#profile-reviews"
           className="hover:underline hover:cursor-pointer"
         >
-          Ver mais feedbacks
+          Ver mais avaliações
         </Link>
         <svg
           className="group-hover:translate-x-1 transition-transform duration-150"

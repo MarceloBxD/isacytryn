@@ -2,7 +2,6 @@
 
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
-import { NAV_DATA, FOOTER_DATA } from "@/data";
 import Link from "next/link";
 import Image from "next/image";
 import { CtaButton } from "../CtaButton";
@@ -28,7 +27,7 @@ const SOCIAL_MEDIA_ITEMS = [
         height={32}
       />
     ),
-    href: "https://www.doctoralia.com.br/isabela-cytryn-2",
+    href: "https://www.doctoralia.com.br/isabela-cytryn-2/psicologo/rio-de-janeiro#profile-reviews",
   },
 ];
 
@@ -49,15 +48,15 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-xl md:text-2xl font-bold text-black">Endereço</h1>
           <p className="text-md md:text-lg max-w-[350px] md:max-w-full mt-2 text-black">
-            Rua Capitão Salomão, 63 - Humaitá - Rio de Janeiro, RJ
+            Atendimento <b>online</b> e <b>presencial</b> na Zona Sul do Rio de
+            Janeiro
           </p>
           <p className="text-md md:text-lg font-bold">CRP: 05/69829</p>
           <p className="text-md md:text-lg">Isabela Fernandes Cytryn</p>
         </div>
         <div className="mt-5 md:mt-0">
-          <CtaButton title="Entre em contato pelo <b>Whatsapp</b>!" />
+          <CtaButton title="Entre em contato pelo <b>WhatsApp</b>!" />
           <BackToTopButton />
         </div>
         <div className="font-thin italic text-sm mt-5">

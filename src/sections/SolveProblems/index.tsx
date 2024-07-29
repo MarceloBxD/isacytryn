@@ -85,7 +85,7 @@ const SolveProblems: React.FC = () => {
   return (
     <motion.section
       {...FADE_IN_BASIC_ANIMATION}
-      id="solucao-de-problemas"
+      id="sintomas"
       className={`
     grid
     grid-cols-1
