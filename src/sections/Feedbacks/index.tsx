@@ -18,7 +18,7 @@ const Feedbacks: React.FC = () => {
       {...FADE_IN_BASIC_ANIMATION}
       className="max-w-screen container w-full mt-10"
     >
-      <Title className="" text="Avaliações" />
+      <Title className="" text="AVALIAÇÕES" />
 
       <div>
         <Swiper

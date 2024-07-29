@@ -118,7 +118,6 @@ const Presentation: React.FC = () => {
           <CtaButton title="Entre em contato pelo <b>WhatsApp</b>!" />
         </motion.div>
       </div>
-      <div></div>
     </section>
   );
 };

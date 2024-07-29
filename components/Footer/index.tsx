@@ -49,8 +49,8 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col items-center text-center">
           <p className="text-md md:text-lg max-w-[350px] md:max-w-full mt-2 text-black">
-            Atendimento <b>online</b> e <b>presencial</b> na Zona Sul do Rio de
-            Janeiro
+            Atendimento <b>online</b> e <b>presencial</b> <br />
+            na Zona Sul do Rio de Janeiro
           </p>
           <p className="text-md md:text-lg font-bold">CRP: 05/69829</p>
           <p className="text-md md:text-lg">Isabela Fernandes Cytryn</p>
