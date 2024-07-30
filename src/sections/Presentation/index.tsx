@@ -68,19 +68,13 @@ const Presentation: React.FC = () => {
   return (
     <section
       id="apresentacao"
-      className="relative flex flex-col md:flex-row  items-center h-screen max-w-screen -mb-10 md:mb-12"
+      className="relative flex flex-col md:flex-row items-center md:h-[calc(100vh-80px)] max-w-screen -mb-10 md:mb-12"
     >
-      <div className="relative w-full max-w-screen h-[280px] md:w-[400px] md:h-full">
+      <div className="relative w-full max-w-screen h-[280px] md:w-[1400px]  md:h-full">
         <Image
           layout="fill"
           alt="Isa Front Image"
-          className="object-cover hidden bg-top opacity-25"
-          src="/images/isa-front-image.jpg"
-        />
-        <Image
-          layout="fill"
-          alt="Isa Front Image"
-          className="object-cover object-top bg-top "
+          className="object-cover object-top bg-center bg-cover "
           src="/images/bg.jpg"
         />
       </div>

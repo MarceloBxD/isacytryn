@@ -123,12 +123,6 @@ const About: React.FC = () => {
           />
           {/* Adicione formas geométricas personalizadas */}
           <div className="custom-shape"></div>
-          <div className="absolute top-4 left-4 w-16 h-16 bg-[#DE9790] rounded-full flex items-center justify-center shadow-md">
-            <span className="text-white text-xl">🧠</span>
-          </div>
-          <div className="absolute bottom-4 right-4 w-16 h-16 bg-[#6C63FF] rounded-full flex items-center justify-center shadow-md">
-            <span className="text-white text-xl">💭</span>
-          </div>
         </div>
       </div>
     </section>

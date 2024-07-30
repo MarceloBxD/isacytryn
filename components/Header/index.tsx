@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
       } w-full z-50 top-0 bg-secondary border-white border-b-2 rounded-lg flex ${
         isOpen ? `items-start` : `items-center `
       }
-      } justify-between px-10 py-6 md:py-4`}
+      } justify-between px-10 md:max-h-[90px] py-6 md:py-4`}
     >
       <div className="relative h-10 md:h-12 w-48 md:w-64">
         <Link href="/">

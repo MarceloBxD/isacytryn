@@ -105,6 +105,8 @@ const SolveProblems: React.FC = () => {
         justify-center
         text-center
         text-quaternary
+        mt-20
+        md:mt-0
         `}
       >
         <Title
