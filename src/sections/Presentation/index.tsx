@@ -16,12 +16,12 @@ import { PRESENTATION_DATA } from "@/data";
 
 const PresentationImage: React.FC = () => {
   return (
-    <div className="relative w-full h-[calc(100vh-80px)] md:h-full md:w-1/3">
+    <div className="relative w-full h-[320px] md:h-full md:w-1/3">
       <Image
         layout="fill"
         alt="Isa Front Image"
         className="object-cover object-top"
-        src="/images/isa-front-image.jpg"
+        src="/images/bg.jpg"
       />
     </div>
   );
@@ -33,7 +33,7 @@ const Presentation: React.FC = () => {
       id="apresentacao"
       className="relative flex flex-col-reverse md:flex-row items-center md:h-[calc(100vh-80px)] max-w-screen -mb-10 md:mb-12"
     >
-      <div className="mt-5 flex-1 md:w-2/3 flex flex-col justify-center items-center md:items-start px-4 md:px-8">
+      <div className="mt-5 flex-1  flex flex-col justify-center items-center md:items-start px-4 md:px-8">
         <div className="flex flex-col items-center md:items-start text-quaternary gap-2 md:gap-4">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}
@@ -50,13 +50,13 @@ const Presentation: React.FC = () => {
         </div>
         <motion.p
           {...FADE_IN_BASIC_ANIMATION}
-          className="text-sm text-quaternary max-w-[70%] mx-auto md:mx-0 md:max-w-[50%] text-center md:text-left py-3 md:py-5"
+          className="text-sm text-quaternary max-w-[70%] mx-auto md:mx-0 md:max-w-[75%] text-center md:text-left py-3 md:py-5"
         >
           {PRESENTATION_DATA.description}
         </motion.p>
         <motion.p
           {...FADE_IN_BASIC_ANIMATION}
-          className="text-sm text-quaternary max-w-[70%] mx-auto md:mx-0 md:max-w-[45%] text-center md:text-left pb-3 md:pb-5 font-semibold"
+          className="text-sm text-quaternary max-w-[70%] mx-auto md:mx-0 md:max-w-[75%] text-center md:text-left pb-3 md:pb-5 font-semibold"
         >
           {PRESENTATION_DATA.preCta}
         </motion.p>
