@@ -19,6 +19,6 @@ Recomendo e a indico de olhos fechados."`,
   },
   {
     quantOfstars: 5,
-    description: `"Isabela é uma terapeuta muito delicada e gentil. Isso é fundamental para criar o ambiente de acolhimento necessário ao processo terapêutico. Sou muito grata por toda a compreensão que venho adquirindo sobre mim, me ajudando a viver meinor."`,
+    description: `"Isabela é uma terapeuta muito delicada e gentil. Isso é fundamental para criar o ambiente de acolhimento necessário ao processo terapêutico. Sou muito grata por toda a compreensão que venho adquirindo sobre mim, me ajudando a viver melhor."`,
   },
 ];
