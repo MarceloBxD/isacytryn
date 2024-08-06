@@ -61,10 +61,10 @@ export const Header: React.FC = () => {
             priority
             src={
               scrolled
-                ? "/assets/logos/isa_logo_horizontal.png"
+                ? "/assets/logos/isa_logo_horizontal.webp"
                 : isOpen
-                ? "/assets/logos/isa_logo_horizontal.png"
-                : "/assets/logos/isa_logo_horizontal_branco.png"
+                ? "/assets/logos/isa_logo_horizontal.webp"
+                : "/assets/logos/isa_logo_horizontal_branco.webp"
             }
             layout="fill"
             className="object-contain"

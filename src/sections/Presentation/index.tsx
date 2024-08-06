@@ -21,7 +21,7 @@ const PresentationImage: React.FC = () => {
         layout="fill"
         alt="Isa Front Image"
         className="object-cover object-top"
-        src="/images/bg.jpg"
+        src="/images/bg.webp"
       />
     </div>
   );

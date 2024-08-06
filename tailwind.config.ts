@@ -27,7 +27,7 @@ const config = {
         terciary: "#DE9790",
       },
       backgroundImage: {
-        "hero-pattern": "url('/images/bg.jpg')",
+        "hero-pattern": "url('/images/bg.webp')",
       },
       colors: {
         primary: "#F0e9e0",

@@ -10,7 +10,7 @@ const PRESENTATION_DATA = {
 
   preCta:
     "Dê uma chance para si mesmo e marque uma sessão de terapia. Nunca é tarde para (re)começar.",
-  bgImg: "/images/bg.jpg",
+  bgImg: "/images/bg.webp",
 };
 
 export default PRESENTATION_DATA;
