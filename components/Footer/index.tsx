@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               target="_blank"
               key={item.id}
               href={item.href}
-              className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white hover:bg-secondary  transition-colors duration-300 rounded-full"
+              className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 hover:bg-secondary  transition-colors duration-300 rounded-full"
             >
               {item.image}
             </Link>
