@@ -27,7 +27,10 @@ const MetaTags = () => {
       <meta property="og:title" content="Isa Cytryn" />
       <meta property="og:description" content="" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://psicologaisabelacytryn.com.br/" />
+      <meta
+        property="og:url"
+        content="https://psicologaisabelacytryn.com.br/"
+      />
       <meta
         property="og:image"
         content="https://psicologaisabelacytryn.com.br/og/og_image_1.webp"

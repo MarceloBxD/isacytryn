@@ -115,7 +115,7 @@ const About: React.FC = () => {
         <div className="relative w-full h-[500px] md:w-[500px] md:h-[500px] mx-auto mt-8 md:mt-0 md:mx-0">
           <div className="absolute inset-0 -z-10 bg-[#F0E9E0] rounded-lg shadow-lg"></div>
           <Image
-            src="/images/bg.webp"
+            src="/images/isa-front-image.webp"
             className={`about-image rounded-lg w-full h-full object-cover border-8 border-[#DE9790] shadow-xl 
             md:rounded-lg md:w-full md:h-full md:object-cover md:border-8 md:border-[#DE9790] md:shadow-xl`}
             alt="Isabela Cytryn"
