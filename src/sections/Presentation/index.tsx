@@ -37,13 +37,13 @@ const Presentation: React.FC = () => {
         <div className="flex flex-col items-center md:items-start text-quaternary gap-2 md:gap-4">
           <motion.h1
             {...FADE_IN_BASIC_ANIMATION}
-            className="text-lg text-center md:text-left md:text-3xl"
+            className="text-xl font-bold text-center md:text-left md:text-3xl"
           >
             {PRESENTATION_DATA.degree}
           </motion.h1>
           <motion.h2
             {...FADE_IN_BASIC_ANIMATION}
-            className="text-lg md:text-2xl font-bold text-center md:text-left"
+            className="text-lg md:text-2xl font-medium text-center md:text-left"
           >
             {PRESENTATION_DATA.specialty}
           </motion.h2>
