@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import React, { createContext, useContext, useEffect } from "react";
 
 type AppContextProps = {
@@ -29,6 +30,19 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [isMobile, setIsMobile] = React.useState(false);
   const [isTablet, setIsTablet] = React.useState(false);
   const [isDesktop, setIsDesktop] = React.useState(false);
+
+  useEffect(() => {
+    try {
+      const fetchContentfulData = async () => {
+        const response = await axios.get("/api/contentful");
+        console.log(response.data);
+      };
+
+      fetchContentfulData();
+    } catch (err) {
+      throw err;
+    }
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {

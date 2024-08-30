@@ -21,4 +21,8 @@ Recomendo e a indico de olhos fechados."`,
     quantOfstars: 5,
     description: `"Isabela é uma terapeuta muito delicada e gentil. Isso é fundamental para criar o ambiente de acolhimento necessário ao processo terapêutico. Sou muito grata por toda a compreensão que venho adquirindo sobre mim, me ajudando a viver melhor."`,
   },
+  {
+    quantOfstars: 5,
+    description: `"Excelente profissional. Atenciosa, cuidadosa e extremamente solícita. Trabalha de forma séria, auxiliando o paciente e suas questões, e atua com uma abordagem que possui evidências científicas."`,
+  },
 ];

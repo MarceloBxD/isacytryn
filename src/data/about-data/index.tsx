@@ -1,6 +1,6 @@
 const ABOUT_DATA = [
   <>
-    Graduação em <b>psicologia</b> pela PUC-rio
+    Graduação em <b>Psicologia</b> pela PUC-Rio
   </>,
   <>
     Pós-graduação em <b>Gestão em Saúde</b> pela Faculdade Israelita Albert
@@ -16,7 +16,7 @@ const ABOUT_DATA = [
     Cursos livres em <b>Transtornos de Ansiedade e Transtornos Bipolares</b>
   </>,
   <>
-    6 meses de mentoria em <b>competências clínicas</b> pelo ABCdaTCC
+    6 meses de mentoria em <b>Competências Clínicas</b> pelo ABCdaTCC
   </>,
 ];
 

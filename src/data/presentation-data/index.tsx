@@ -2,10 +2,7 @@ const PRESENTATION_DATA = {
   degree: "Psicóloga clínica especializada em adultos",
   specialty: "Terapia cognitivo-comportamental",
   description: `
-      Talvez você esteja enfrentando alguma dificuldade e sua ansiedade está
-      interferindo na capacidade de pensar com clareza, resolver problemas ou
-      mesmo ter prazer. Se algo está gerando sofrimento em sua vida, isso
-      importa, exige cuidado, e eu estou aqui para ajudar.
+      Talvez você esteja enfrentando alguma dificuldade que está afetando sua capacidade de pensar com clareza, resolver problemas ou mesmo sentir prazer. Se algo está causando sofrimento em sua vida, isso merece atenção e eu estou aqui para ajudar.
     `,
 
   preCta:

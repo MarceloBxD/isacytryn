@@ -25,11 +25,7 @@ const FAQ_DATA = [
   },
   {
     question: "O que esperar da primeira sessão?",
-    answer: `Em nossa primeira oportunidade de nos conhecermos e começarmos a criar um vínculo, você pode esperar: que eu explore por quais motivos você está buscando iniciar a terapia;
-vamos conversar acerca das suas expectativas com a terapia;
-vamos falar brevemente sobre teu dia a dia para entender melhor o contexto da sua queixa e
-vou te explicar como funciona o processo terapêutico e como eu espero que nossas sessões sigam a partir da leitura que fiz da nossa primeira sessão
-tirarei suas dúvidas e veremos se faz sentido seguirmos juntos!`,
+    answer: `Em nossa primeira sessão, teremos a oportunidade de nos conhecermos e começarmos a criar um vínculo. Vamos explorar os motivos que te fazem buscar terapia e quais são suas expectativas em relação ao processo. Explicarei como funciona a terapia e como espero que nossas sessões se desenvolvam com base no que observei durante esse primeiro encontro. Estarei disponível para esclarecer suas dúvidas e, juntos, veremos se faz sentido continuarmos com o trabalho.`,
   },
   {
     question: "Quanto custa a sessão?",
@@ -37,9 +33,9 @@ tirarei suas dúvidas e veremos se faz sentido seguirmos juntos!`,
       "O Conselho Federal de Psicologia não permite que o preço seja usado como forma de divulgação. Por esta razão, você pode ter mais informações entrando em contato comigo pelo WhatsApp.",
   },
   {
-    question: "A primeira sessão é cobrada?",
+    question: "Você oferece sessões online ou presenciais?",
     answer:
-      "É cobrada caso você opte por iniciar o processo de psicoterapia comigo.",
+      "Eu trabalho com atendimento online e presencial, no Humaitá - Rio de Janeiro/RJ.",
   },
 ];
 

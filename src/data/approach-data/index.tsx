@@ -10,7 +10,8 @@ const APPROACH_DATA = {
     <>
       Iremos trabalhar com abordagens baseadas em evidências em uma jornada
       personalizada e adaptada às suas necessidades específicas, rumo à uma
-      mudança significativa no enfrentamento de desafios emocionais.
+      mudança significativa no enfrentamento de desafios emocionais{" "}
+      <b> e comportamentais.</b>
     </>
   ),
   items: [
