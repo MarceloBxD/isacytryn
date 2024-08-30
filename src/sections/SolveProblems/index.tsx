@@ -43,9 +43,8 @@ const SOLVE_PROBLEMS_DATA = {
       faceIcon: <Pause size={24} color="#FFF" />,
       description: (
         <p className="font-normal">
-          Esteja sendo <b>prejudicado</b> em mais de uma área da sua vida, como
-          trabalho, relacionamentos, saúde física e família, criando uma bola de
-          neve.
+          Esteja passando por <b>dificuldade nos seus relacionamentos</b>, sejam
+          eles familiares, românticos ou profissionais.
         </p>
       ),
     },
